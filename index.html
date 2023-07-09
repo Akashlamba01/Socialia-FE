@@ -23,8 +23,32 @@
   <body>
     <header>
       <div class="heading-section">
-        <h2 class="heading">Socialia</h2>
-        <!-- <a href=""><i class="fa-solid fa-magnifying-glass"></i></a> -->
+        <a href="">
+          <h2 class="heading">Socialia</h2>
+        </a>
+
+        <div>
+          <div onclick="toggleSettingBtn()" id="show">
+            <i class="fa-solid fa-gear"></i>
+          </div>
+          <div class="profile-setting-toggle" id="profile-setting">
+            <div onclick="toggleSettingBtn()">
+              <a> cencel </a>
+            </div>
+            <div>
+              <a href="">profile</a>
+            </div>
+            <div>
+              <a href="">update profile</a>
+            </div>
+            <div>
+              <a href="">settings</a>
+            </div>
+            <div>
+              <a href="">logout</a>
+            </div>
+          </div>
+        </div>
       </div>
 
       <nav>
@@ -37,12 +61,14 @@
           <li>
             <a href="./users.html"><i class="fa-solid fa-user-group"></i></a>
           </li>
-          <li>
+          <li class="display-none-icon">
             <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
           </li>
+
           <li>
-            <a href="#"><i class="fa-solid fa-message"></i></a>
+            <a href=""><i class="fa-solid fa-message"></i></a>
           </li>
+
           <li>
             <a href="#"><i class="fa-solid fa-bell"></i></a>
           </li>
@@ -55,7 +81,296 @@
 
     <section id="main-container">
       <!-- friend side section///////////// -->
-      <div id="friend-and-list"></div>
+
+      <div id="friends-container">
+        <div class="friends-heading">
+          <h1>Friends</h1>
+          <div>
+            <i class="fa-solid fa-search"></i>
+          </div>
+        </div>
+
+        <!-- user box start -->
+        <div class="friend-user-box">
+          <!-- request heading  -->
+          <div class="request-heading">
+            <h3>Friend requests</h3>
+            <a href="">See All</a>
+          </div>
+
+          <!-- request friend box start-->
+          <div class="users-box">
+            <div class="users-img">
+              <img src="../image//profile/proImg.jpg" alt="" />
+            </div>
+
+            <div class="users-name">
+              <h3>Akash Lamba</h3>
+              <div class="confirm-add-btns-box">
+                <a href="">
+                  <div class="confirm-add-btns" id="friend-confirm-btn">
+                    Confirm
+                  </div>
+                </a>
+
+                <a href="">
+                  <div
+                    class="confirm-add-btns"
+                    id="friend-delete-btn"
+                    style="margin-left: 10px">
+                    Remove
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="users-box">
+            <div class="users-img">
+              <img src="../image//profile/proImg.jpg" alt="" />
+            </div>
+
+            <div class="users-name">
+              <h3>Akash Lamba</h3>
+              <div class="confirm-add-btns-box">
+                <a href="">
+                  <div class="confirm-add-btns" id="friend-confirm-btn">
+                    Confirm
+                  </div>
+                </a>
+
+                <a href="">
+                  <div
+                    class="confirm-add-btns"
+                    id="friend-delete-btn"
+                    style="margin-left: 10px">
+                    Remove
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="users-box">
+            <div class="users-img">
+              <img src="../image//profile/proImg.jpg" alt="" />
+            </div>
+
+            <div class="users-name">
+              <h3>Akash Lamba</h3>
+              <div class="confirm-add-btns-box">
+                <a href="">
+                  <div class="confirm-add-btns" id="friend-confirm-btn">
+                    Confirm
+                  </div>
+                </a>
+
+                <a href="">
+                  <div
+                    class="confirm-add-btns"
+                    id="friend-delete-btn"
+                    style="margin-left: 10px">
+                    Remove
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="users-box">
+            <div class="users-img">
+              <img src="../image//profile/proImg.jpg" alt="" />
+            </div>
+
+            <div class="users-name">
+              <h3>Akash Lamba</h3>
+              <div class="confirm-add-btns-box">
+                <a href="">
+                  <div class="confirm-add-btns" id="friend-confirm-btn">
+                    Confirm
+                  </div>
+                </a>
+
+                <a href="">
+                  <div
+                    class="confirm-add-btns"
+                    id="friend-delete-btn"
+                    style="margin-left: 10px">
+                    Remove
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="users-box">
+            <div class="users-img">
+              <img src="../image//profile/proImg.jpg" alt="" />
+            </div>
+
+            <div class="users-name">
+              <h3>Akash Lamba</h3>
+              <div class="confirm-add-btns-box">
+                <a href="">
+                  <div class="confirm-add-btns" id="friend-confirm-btn">
+                    Confirm
+                  </div>
+                </a>
+
+                <a href="">
+                  <div
+                    class="confirm-add-btns"
+                    id="friend-delete-btn"
+                    style="margin-left: 10px">
+                    Remove
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- request friend box end-->
+        </div>
+
+        <div class="friend-user-box">
+          <!-- request heading  -->
+          <div class="request-heading">
+            <h3>People in Socialia</h3>
+            <a href="">See All</a>
+          </div>
+
+          <!-- request user box start-->
+          <div class="users-box">
+            <div class="users-img">
+              <img src="../image//profile/proImg.jpg" alt="" />
+            </div>
+
+            <div class="users-name">
+              <h3>Akash Lamba</h3>
+              <div class="confirm-add-btns-box">
+                <a href="">
+                  <div class="confirm-add-btns" id="friend-confirm-btn">
+                    Add
+                  </div>
+                </a>
+
+                <a href="">
+                  <div
+                    class="confirm-add-btns"
+                    id="friend-delete-btn"
+                    style="margin-left: 10px">
+                    Remove
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="users-box">
+            <div class="users-img">
+              <img src="../image//profile/proImg.jpg" alt="" />
+            </div>
+
+            <div class="users-name">
+              <h3>Akash Lamba</h3>
+              <div class="confirm-add-btns-box">
+                <a href="">
+                  <div class="confirm-add-btns" id="friend-confirm-btn">
+                    Add
+                  </div>
+                </a>
+
+                <a href="">
+                  <div
+                    class="confirm-add-btns"
+                    id="friend-delete-btn"
+                    style="margin-left: 10px">
+                    Remove
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="users-box">
+            <div class="users-img">
+              <img src="../image//profile/proImg.jpg" alt="" />
+            </div>
+
+            <div class="users-name">
+              <h3>Akash Lamba</h3>
+              <div class="confirm-add-btns-box">
+                <a href="">
+                  <div class="confirm-add-btns" id="friend-confirm-btn">
+                    Add
+                  </div>
+                </a>
+
+                <a href="">
+                  <div
+                    class="confirm-add-btns"
+                    id="friend-delete-btn"
+                    style="margin-left: 10px">
+                    Remove
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="users-box">
+            <div class="users-img">
+              <img src="../image//profile/proImg.jpg" alt="" />
+            </div>
+
+            <div class="users-name">
+              <h3>Akash Lamba</h3>
+              <div class="confirm-add-btns-box">
+                <a href="">
+                  <div class="confirm-add-btns" id="friend-confirm-btn">
+                    Add
+                  </div>
+                </a>
+
+                <a href="">
+                  <div
+                    class="confirm-add-btns"
+                    id="friend-delete-btn"
+                    style="margin-left: 10px">
+                    Remove
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="users-box">
+            <div class="users-img">
+              <img src="../image//profile/proImg.jpg" alt="" />
+            </div>
+
+            <div class="users-name">
+              <h3>Akash Lamba</h3>
+              <div class="confirm-add-btns-box">
+                <a href="">
+                  <div class="confirm-add-btns" id="friend-confirm-btn">
+                    Add
+                  </div>
+                </a>
+
+                <a href="">
+                  <div
+                    class="confirm-add-btns"
+                    id="friend-delete-btn"
+                    style="margin-left: 10px">
+                    Remove
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- request user box start-->
+        </div>
+      </div>
 
       <!-- post and timeline section/////////////// -->
       <div id="post-timeline">
@@ -130,5 +445,17 @@
       <!-- messages and its list-->
       <div id="messages-and-list"></div>
     </section>
+
+    <script>
+      var x = document.querySelector(".profile-setting-toggle");
+      x.style.display = "none";
+      function toggleSettingBtn() {
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
+      }
+    </script>
   </body>
 </html>

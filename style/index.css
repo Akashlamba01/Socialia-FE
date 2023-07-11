@@ -16,122 +16,12 @@
 body {
   font-family: "Comme";
 }
-/* a style///////// */
 a {
   text-decoration: none;
 }
 
-/* header /////////////////////////////*/
-header {
-  width: 90%;
-  margin: auto;
-}
-.heading-section {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 5px;
-}
-.heading {
-  font-family: "Comme";
-  color: rgb(117 18 58);
-  margin-bottom: 8px;
-}
-/* toggle///////////////////////////////// */
-.heading-section #show {
-  /* border: 2px solid blue; */
-  padding: 4px 8px;
-  border-radius: 50%;
-  margin-top: 8px;
-  background-color: rgb(230, 229, 229);
-  cursor: pointer;
-}
-.heading-section #show:hover {
-  opacity: 0.9;
-}
-.profile-setting-toggle {
-  display: none;
-}
-.profile-setting-toggle a {
-  cursor: pointer;
-}
-#profile-setting {
-  border: 2px solid gray;
-  width: 120px;
-  /* height: 200px; */
-  /* top: 2px;
-  right: 1px; */
-  margin-left: -90px;
-  /* right: 6px; */
-  /* margin-right: 100px; */
-  /* right: 3px; */
-  margin-top: -28px;
-  position: absolute;
-  position: fixed;
-  background-color: rgb(228, 228, 228);
-}
-#profile-setting div {
-  border-bottom: 1px solid gray;
-  /* height: 24px; */
-  padding: 4px;
-  padding-left: 10px;
-}
-#profile-setting div a {
-  color: black;
-  font-weight: bold;
-}
-#profile-setting div:hover {
-  background-color: rgb(211, 211, 211);
-}
-
-/* #show:target #cont {
-  display: grid;
-  width: 20px;
-  height: 100px;
-  border: 2px solid red;
-} */
-/* #cont {
-  display: none;
-}
-#show:target #cont {
-  display: contents;
-}
-#show:target #show {
-  display: none;
-} */
-
-/* .heading-section #show i {
-  border: 2px solid orange;
-  font-size: 30px;
-  
-  color: rgb(156, 156, 156);
-  margin-top: 4px;
-} */
-header nav ul {
-  display: flex;
-  justify-content: space-between;
-  /* margin: 4px; */
-  margin-bottom: 10px;
-}
-header nav ul li {
-  list-style: none;
-  font-size: 20px;
-}
-.heading-section .heading i,
-header nav ul li i {
-  color: rgb(156, 156, 156);
-}
-.heading-section #show i:hover,
-header nav ul li i:hover {
-  /* color: rgb(126, 126, 126); */
-  opacity: 0.6;
-}
-.activate {
-  /* color: rgb(117 18 58); */
-  color: rgb(117 18 58);
-}
-.activate:hover {
-  opacity: 0.8;
-}
+/* headerrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr start */
+/* header end /////////////////////////////*/
 
 /* main container section  ////////////////////////////////////////////// */
 #main-container {
@@ -336,12 +226,8 @@ header nav ul li i:hover {
 /*  */
 /*  */
 
+/* media for 460px////////////////////////////////////////////////////////////// */
 @media screen and (min-width: 460px) {
-  #profile-setting {
-    /* margin-left: -0px; */
-    margin-left: -85px;
-    /* right: 10px; */
-  }
   .create-post a .input-title {
     padding-left: 16px;
   }
@@ -349,6 +235,8 @@ header nav ul li i:hover {
     width: 220px;
   }
 }
+
+/* media for 720px////////////////////////////////////////////////////////////// */
 @media screen and (min-width: 720px) {
   body {
     width: 720px;
@@ -356,9 +244,7 @@ header nav ul li i:hover {
   }
 
   #profile-setting {
-    /* right: none; */
     margin-left: -70px;
-    /* right: 10px; */
   }
 
   .create-post a .input-title {
@@ -367,90 +253,22 @@ header nav ul li i:hover {
     padding-top: 12px;
   }
 }
+
+/* media for 1200px////////////////////////////////////////////////////////////// */
 @media screen and (min-width: 1200px) {
   body {
     width: 100%;
   }
-  header {
-    /* padding-top: 10px; */
-    background-color: white;
-    position: fixed;
-    width: 100%;
-    /* border: 2px solid green; */
-    /* padding-left: 20px; */
-    background-color: rgb(230, 229, 229);
-    border-bottom: 3px solid rgb(194, 194, 194);
-    height: 60px;
-  }
-  .heading-section {
-    padding-left: 20px;
-  }
-  .heading-section .heading {
-    font-size: 36px;
-    padding-top: 10px;
-    font-weight: bold;
-  }
-  .heading-section #show {
-    /* border: 2px solid blue; */
-    padding: 4px 10px;
-    font-size: 25px;
-    border-radius: 50%;
-    margin-top: 12px;
-    background-color: white;
-    margin-right: 20px;
-    cursor: pointer;
-  }
-  #profile-setting {
-    /* right: none; */
-    margin-left: -70px;
-    margin-top: -40px;
-    /* right: 10px; */
-  }
 
-  header nav {
-    width: 560px;
-    margin: auto;
-    margin-top: -40px;
-  }
-  header nav ul {
-    /* width: 90%; */
-    /* margin: auto; */
+  /* headerrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr start */
 
-    margin-top: -50px;
-    /* border: 2px solid green; */
-  }
-  header nav ul li i {
-    font-size: 30px;
-    padding-top: 5px;
-    padding: 21px 18px 13px;
-    margin-top: -20px;
-    margin-bottom: 0;
-  }
-  .activate {
-    border-bottom: 3px solid rgb(117, 18, 58);
-    animation: shadow-inset-bottom 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94)
-      both;
-  }
-
-  .display-none-icon {
-    display: none;
-  }
-
-  .heading-section .heading i {
-    display: inline-block;
-  }
+  /* header end /////////////////////////////*/
 
   #main-container {
-    /* width: 560px; */
     width: 100%;
     display: flex;
     justify-content: space-between;
-    /* border: none; */
-    /* border: 2px solid red; */
     top: 0;
-
-    /* height: 100vh; */
-    /* margin-top: -5px; */
   }
 
   /* friend container////////////////////////////////////////////////////////// */
@@ -472,11 +290,36 @@ header nav ul li i:hover {
     margin: 10px auto 0;
     justify-content: space-between;
     padding: 0 5%;
-    padding-bottom: 3px;
+    padding-bottom: 6px;
     /* font-family: Calibri */
     font-weight: bold;
-    padding-top: 60px;
+    padding-top: 65px;
     border-bottom: 1px solid rgb(184, 184, 184);
+    /* border: 2px solid red; */
+  }
+  .friends-heading > form {
+    margin-top: 2px;
+    /* margin-left: 10px; */
+    /* border: 2px solid red; */
+    width: 200px;
+  }
+  .friends-heading > form input {
+    background-color: rgb(249, 249, 249);
+    height: 20px;
+    margin-left: 13px;
+    height: 30px;
+    padding-left: 4px;
+    border-radius: 5px;
+    margin-top: -12px;
+    font-size: 18px;
+    width: 162px;
+  }
+  .friends-heading > form button {
+    margin-left: -24px;
+    background-color: transparent;
+    border: none;
+  }
+  .friends-heading > form i {
   }
   .friend-user-box {
     /* border: 1px solid rgb(146, 146, 146); */
@@ -487,6 +330,7 @@ header nav ul li i:hover {
 
     /* padding-bottom: 10px; */
   }
+
   /* .friend-user-box-innerbox {
   } */
   .friend-user-box .request-heading {
@@ -534,6 +378,8 @@ header nav ul li i:hover {
   .users-name h3 {
     /* border: 2px solid yellow; */
     padding-top: 4px;
+    overflow: hidden;
+    height: 20px;
     /* height: 20px; */
   }
   .users-box .users-name .users-name-message {
@@ -672,6 +518,11 @@ header nav ul li i:hover {
 @media screen and (min-width: 1400px) {
   #main-container .friend-message-container {
     width: 360px;
+  }
+  .friends-heading > form input {
+    width: 180px;
+    /* height: 30px; */
+    /* background-color: rebeccapurple; */
   }
 
   #main-container #post-timeline {

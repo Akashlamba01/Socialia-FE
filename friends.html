@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Real-time Updates: Utilized WebSocket technology (e.g., Socket.io) to provide real-time notifications and updates to users.  -->
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Socialia | Home</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Comme&family=Edu+NSW+ACT+Foundation:wght@500&family=Pacifico&display=swap"
+      rel="stylesheet" />
+
+    <!-- css links/////////// -->
+    <link rel="stylesheet" href="style/_header.css" />
+    <link rel="stylesheet" href="style/index.css" />
+    <link rel="stylesheet" href="style/friend.css" />
+
+    <script
+      src="https://kit.fontawesome.com/8ff5f3e8e1.js"
+      crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    <header>
+      <div class="heading-section">
+        <a href="">
+          <h1 class="heading">Socialia</h1>
+        </a>
+
+        <div>
+          <div onclick="toggleSettingBtn()" id="show">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+          <div class="profile-setting-toggle" id="profile-setting">
+            <div onclick="toggleSettingBtn()">
+              <a> cencel </a>
+            </div>
+            <div>
+              <a href="">profile</a>
+            </div>
+            <div>
+              <a href="">update profile</a>
+            </div>
+            <div>
+              <a href="">settings</a>
+            </div>
+            <div>
+              <a href="">logout</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <nav>
+        <ul>
+          <li>
+            <a href="./index.html"><i class="fa-solid fa-house"></i> </a>
+          </li>
+          <li>
+            <a href="./users.html"
+              ><i class="fa-solid fa-user-group activate"></i
+            ></a>
+          </li>
+          <li class="display-none-icon">
+            <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
+          </li>
+
+          <li class="display-none-icon">
+            <a href=""><i class="fa-solid fa-message"></i></a>
+          </li>
+
+          <li>
+            <a href="#"><i class="fa-solid fa-bell"></i></a>
+          </li>
+          <li class="login">
+            <a href="./login.html"><i class="fa-solid fa-user"></i></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="friend-container">
+      <div class="frined-search-type">
+        <div class="friends-heading">
+          <h1>Friends</h1>
+
+          <form action="">
+            <input type="text" placeholder="search..." />
+            <button type="submit">
+              <i class="fa-solid fa-search"></i>
+            </button>
+          </form>
+        </div>
+
+        <div
+          class="friend-user-box"
+          style="margin-top: 10px; padding-top: 2px; padding-bottom: 0">
+          <!-- request friend box start-->
+          <a href="" class="active-friend-list">
+            <div
+              class="settings-type"
+              style="background-color: rgb(184, 184, 184)">
+              <div class="users-name">
+                <h3><i class="fa-solid fa-user-group"></i> &nbsp; Home</h3>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div
+          class="friend-user-box"
+          style="padding-top: 6px; padding-bottom: 0">
+          <!-- request friend box start-->
+          <a href="">
+            <div class="settings-type">
+              <div class="users-name">
+                <h3>
+                  <i class="fa-solid fa-user-plus"></i> &nbsp; Friend requests
+                </h3>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div
+          class="friend-user-box"
+          style="padding-top: 6px; padding-bottom: 0">
+          <!-- request friend box start-->
+          <a href="">
+            <div class="settings-type">
+              <div class="users-name">
+                <h3><i class="fa-solid fa-users"></i> &nbsp; All Friends</h3>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div
+          class="friend-user-box"
+          style="padding-top: 6px; padding-bottom: 0">
+          <!-- request friend box start-->
+          <a href="">
+            <div class="settings-type">
+              <div class="users-name">
+                <h3>
+                  <i class="fa-solid fa-list" style="margin-left: 4px"></i>
+                  &nbsp; Custom lists
+                </h3>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="friend-message-container">
+        <div class="friends-heading border-none">
+          <h1 class="none-above-1200">Friends</h1>
+        </div>
+
+        <!-- user box start -->
+        <div class="friend-user-box">
+          <!-- request heading  -->
+          <div class="request-heading">
+            <h3>Friend requests</h3>
+            <a href="">See All</a>
+          </div>
+
+          <!-- request friend box start-->
+          <div class="user-card-box">
+            <div class="users-box">
+              <div class="users-img">
+                <img src="../image//profile/proImg.jpg" alt="" />
+              </div>
+
+              <div class="users-name">
+                <h3>
+                  <a href=""> Akash Lamba </a>
+                </h3>
+                <div class="confirm-add-btns-box">
+                  <a href="">
+                    <div class="confirm-add-btns" id="friend-confirm-btn">
+                      Confirm
+                    </div>
+                  </a>
+
+                  <a href="">
+                    <div
+                      class="confirm-add-btns"
+                      id="friend-delete-btn"
+                      style="margin-left: 10px">
+                      Remove
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="users-box">
+              <div class="users-img">
+                <img src="../image//profile/proImg.jpg" alt="" />
+              </div>
+
+              <div class="users-name">
+                <h3>
+                  <a href=""> Akash Lamba </a>
+                </h3>
+                <div class="confirm-add-btns-box">
+                  <a href="">
+                    <div class="confirm-add-btns" id="friend-confirm-btn">
+                      Confirm
+                    </div>
+                  </a>
+
+                  <a href="">
+                    <div
+                      class="confirm-add-btns"
+                      id="friend-delete-btn"
+                      style="margin-left: 10px">
+                      Remove
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+          </div>
+
+          <!-- request friend box end-->
+        </div>
+
+        <div class="friend-user-box">
+          <!-- request heading  -->
+          <div class="request-heading">
+            <h3>People in Socialia</h3>
+            <a href="">See All</a>
+          </div>
+
+          <!-- request user box start-->
+          <div class="users-box">
+            <div class="users-img">
+              <img src="../image//profile/proImg.jpg" alt="" />
+            </div>
+
+            <div class="users-name">
+              <h3>
+                <a href=""> Akash Lamba </a>
+              </h3>
+              <div class="confirm-add-btns-box">
+                <a href="">
+                  <div class="confirm-add-btns" id="friend-confirm-btn">
+                    Add
+                  </div>
+                </a>
+
+                <a href="">
+                  <div
+                    class="confirm-add-btns"
+                    id="friend-delete-btn"
+                    style="margin-left: 10px">
+                    Remove
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- request user box start-->
+        </div>
+      </div>
+    </section>
+
+    <script>
+      var x = document.querySelector(".profile-setting-toggle");
+      x.style.display = "none";
+      function toggleSettingBtn() {
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
+      }
+    </script>
+  </body>
+</html>

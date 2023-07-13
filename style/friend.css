@@ -1,3 +1,13 @@
+a {
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+  /* top: 0; */
+  /* top: 60px; */
+}
+
 #friend-container {
   width: 100%;
 }
@@ -13,27 +23,65 @@
   width: 100%;
   border-top: 1px solid rgb(156, 156, 156);
 }
+.friend-message-container .friends-heading-min-length {
+  /* border: 2px solid green; */
+  margin: auto;
+  /* border-bottom: 1px solid rgb(156, 156, 156); */
+  padding: 0 5%;
+}
+.friend-message-container .friends-heading-min-length h1 {
+  margin-bottom: 5px;
+}
+.friend-message-container .friends-heading-min-length > small {
+  /* margin: 0 5px 5px; */
+  margin-top: 5px;
+  border-radius: 10px;
+  background-color: rgb(230, 229, 229);
+  /* padding: 1px 3px; */
+  margin-right: 4px;
+  padding: 3px 8px;
+}
+
+.friend-message-container .friends-heading-min-length > small a {
+  color: black;
+}
+
+.friend-message-container .friends-heading-min-length > div {
+  display: flex;
+  /* justify-content: space-between; */
+  flex-wrap: wrap;
+}
+.friend-message-container .friends-heading-min-length > div > a {
+  border: 1px solid gray;
+  padding: 2px 8px;
+  background-color: rgb(230, 229, 229);
+  border-radius: 16px;
+  margin-right: 4px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
 .friends-heading {
+  display: flex;
+  /* width: 90%; */
+  margin: 10px auto 0;
+  justify-content: space-between;
   padding: 0 5%;
   padding-bottom: 6px;
+  /* font-family: Calibri */
   font-weight: bold;
-  margin: 10px auto 0;
   border-bottom: 1px solid rgb(184, 184, 184);
+  /* border: 
+  2px solid red; */
 }
+
 .friends-heading > form {
   margin-top: 2px;
   /* margin-left: 10px; */
   /* border: 2px solid red; */
   width: 200px;
 }
-.friends-heading > form input {
-  background-color: rgb(249, 249, 249);
-  height: 20px;
-  margin-left: 13px;
-  padding-left: 4px;
-  height: 30px;
-  border-radius: 5px;
-}
+
 .friends-heading > form button {
   margin-left: -24px;
   background-color: transparent;
@@ -133,9 +181,12 @@
   border-radius: 5px;
 }
 
-.confirm-add-btns-box #friend-confirm-btn {
+.confirm-add-btns-box .friend-confirm-btn {
   background-color: rgb(117 18 58);
   color: white;
+}
+.confirm-add-btns-box .friend-open-profile-btn {
+  width: 175px;
 }
 .confirm-add-btns-box #friend-delete-btn {
   color: white;
@@ -160,7 +211,19 @@
   }
 }
 
+@media screen and (min-width: 720px) {
+  body {
+    width: 720px;
+    margin: auto;
+  }
+}
+
 @media screen and (min-width: 1200px) {
+  body {
+    width: 100%;
+    /* margin: auto; */
+  }
+
   #friend-container .frined-search-type {
     display: block;
     /* width: 396px; */
@@ -171,7 +234,15 @@
     /* border: ; */
     /* border: 2px solid red; */
   }
-  .friends-heading input {
+  .friends-heading > form input {
+    background-color: rgb(249, 249, 249);
+    height: 20px;
+    margin-left: 13px;
+    height: 30px;
+    padding-left: 4px;
+    border-radius: 5px;
+    margin-top: -12px;
+    font-size: 18px;
     width: 162px;
   }
   .frined-search-type .friend-user-box .settings-type {
@@ -186,14 +257,15 @@
     background-color: rgb(184, 184, 184);
   }
 
+  #friend-list-home {
+    scroll-margin-block-start: 75px;
+    margin-top: 75px;
+  }
+
   .settings-type .users-name h3 {
     margin-top: -4px;
     padding: 4px;
     color: black;
-  }
-
-  .border-none {
-    border: none;
   }
 
   .none-above-1200 {
@@ -213,6 +285,11 @@
     border-left: 2px solid rgb(184, 184, 184);
     /* border: 2px solid red; */
   }
+
+  .friend-message-container .friends-heading-min-length {
+    display: none;
+  }
+
   .friend-message-container::-webkit-scrollbar {
     display: none;
   }
@@ -222,10 +299,17 @@
 
   .user-card-box {
     display: flex;
+    flex-wrap: wrap;
+    /* justify-content; */
+    margin-left: -20px;
+    width: 71vw;
+    /* position: relative; */
     /* border: 2px solid red; */
-    height: 100%;
+    /* margin-left: -20px; */
+    /* width: 1000px; */
+    /* width: 70%; */
+    /* height: 100%; */
   }
-
   .users-box {
     /* width: 100%; */
     width: 195px;
@@ -233,7 +317,8 @@
     /* border: none; */
     display: block;
     /* margin: 0; */
-    margin: 6px 16px 0 0;
+    background-color: rgb(249, 249, 249);
+    margin: 12px 0 10px 20px;
     padding: 0;
     padding-bottom: 10px;
     /* border: 2px solid red; */
@@ -253,26 +338,26 @@
   .users-box .users-name h3 {
     padding: 0;
     /* border: 2px solid red; */
-    padding-top: 5px;
+    padding-top: 8px;
     width: 160px;
   }
   .users-box .users-name .confirm-add-btns-box {
     /* border: 2px solid red; */
     /* padding: 0; */
-    margin-top: -1px;
+    /* margin-top: -1px; */
     width: 180px;
   }
 }
 @media screen and (min-width: 1400px) {
   #friend-container .frined-search-type {
     /* width: 476px; */
-    width: 360px;
+    width: 361px;
   }
 
-  .friends-heading input {
-    width: 180px;
-  }
   #friend-container .friend-message-container {
-    margin-left: 360px;
+    margin-left: 361px;
+  }
+  .friends-heading > form input {
+    width: 180px;
   }
 }

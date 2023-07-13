@@ -35,23 +35,34 @@ a {
 }
 
 /* post container///////////////////////////////////*/
-.create-post a {
-  display: flex;
+.create-post > div {
+  /* display: flex; */
   padding: 12px 10px;
   border-top: 1px solid rgb(193, 193, 193);
   text-decoration: none;
+  /* color: black; */
+}
+
+.create-post > div a {
+  display: flex;
+  /* padding: 12px 10px; */
+  /* border-top: 1px solid rgb(193, 193, 193); */
+  text-decoration: none;
   color: black;
 }
-.create-post a:hover {
-  opacity: 0.8;
+
+.create-post > div:hover {
+  /* opacity: 0.9; */
+  background-color: rgb(249, 249, 249);
+  opacity: 0.9;
   cursor: pointer;
 }
-.create-post a img {
+.create-post > div img {
   width: 50px;
   height: 50px;
   border-radius: 50%;
 }
-.create-post a .input-title {
+.create-post > div .input-title {
   height: 28px;
   margin: 6px 10px 0;
 
@@ -64,12 +75,12 @@ a {
   /* border: 2px solid red; */
 }
 
-.create-post a i {
+.create-post > div i {
   font-size: 24px;
   margin-top: 5px;
   color: gray;
 }
-.create-post a small {
+.create-post > div small {
   font-size: 13px;
   /* margin-top: -3px; */
 }
@@ -228,7 +239,7 @@ a {
 
 /* media for 460px////////////////////////////////////////////////////////////// */
 @media screen and (min-width: 460px) {
-  .create-post a .input-title {
+  .create-post > div .input-title {
     padding-left: 16px;
   }
   .like-comment .like-comment-box {
@@ -242,12 +253,7 @@ a {
     width: 720px;
     margin: auto;
   }
-
-  #profile-setting {
-    margin-left: -70px;
-  }
-
-  .create-post a .input-title {
+  .create-post > div .input-title {
     height: 32px;
     margin-top: 2px;
     padding-top: 12px;
@@ -296,6 +302,36 @@ a {
     padding-top: 65px;
     border-bottom: 1px solid rgb(184, 184, 184);
     /* border: 2px solid red; */
+  }
+  #chat-box {
+    /* display: none; */
+    /* border: 2px solid blue; */
+    background-color: black;
+    top: 100px;
+    right: 340px;
+    position: fixed;
+    width: 360px;
+    height: 450px;
+    border-radius: 30px 0px 30px 30px;
+  }
+  #chat-one {
+    /* border: 2px solid red; */
+    width: 30px;
+    right: 310px;
+    height: 30px;
+    position: fixed;
+    background-color: black;
+    border: 1px solid transparent;
+    border-right: none;
+    border-bottom: 1px solid transparent;
+  }
+  #chat-two {
+    width: 30px;
+    height: 35px;
+    border-radius: 30px 0 0 0;
+    background-color: white;
+    border-right: 2px solid white;
+    border-bottom: none;
   }
   .friends-heading > form {
     margin-top: 2px;
@@ -450,14 +486,14 @@ a {
     margin-top: 80px;
     /* border-top: none; */
   }
-  .create-post a {
+  .create-post > div {
     border-top: none;
     border: 1px solid rgb(184, 184, 185);
     padding: 20px 30px;
     /* background-color: rgba(0, 0, 0, 0.461); */
     border-radius: 20px;
   }
-  .create-post a .input-title {
+  .create-post > div .input-title {
     padding-left: 20px;
   }
 
@@ -524,6 +560,30 @@ a {
     /* height: 30px; */
     /* background-color: rebeccapurple; */
   }
+
+  #chat-box {
+    right: 400px;
+  }
+
+  #chat-one {
+    /* border: 2px solid red; */
+    /* width: 30px; */
+    right: 370px;
+    /* height: 30px; */
+    /* position: fixed; */
+    /* background-color: black; */
+    /* border: 1px solid transparent;
+    border-right: none;
+    border-bottom: 1px solid transparent; */
+  }
+  /* #chat-two {
+    width: 30px;
+    height: 35px;
+    border-radius: 30px 0 0 0;
+    background-color: white;
+    border-right: 2px solid white;
+    border-bottom: none;
+  } */
 
   #main-container #post-timeline {
     width: 660px;

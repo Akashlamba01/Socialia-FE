@@ -34,30 +34,28 @@ header {
 }
 .profile-setting-toggle {
   display: none;
-}
-.profile-setting-toggle a {
   cursor: pointer;
-}
-#profile-setting {
+  /* margin-left: -100px; */
   border: 2px solid gray;
-  width: 130px;
   margin-left: -90px;
+  width: 130px;
   margin-top: -28px;
-  position: absolute;
+  /* position: absolute; */
   position: fixed;
   background-color: rgb(228, 228, 228);
 }
-#profile-setting div {
+
+.profile-setting-toggle div {
   border-bottom: 1px solid gray;
   /* height: 24px; */
   padding: 4px;
   padding-left: 10px;
 }
-#profile-setting div a {
+.profile-setting-toggle div a {
   color: black;
   font-weight: bold;
 }
-#profile-setting div:hover {
+.profile-setting-toggle div:hover {
   background-color: rgb(211, 211, 211);
 }
 header nav ul {
@@ -89,14 +87,14 @@ header nav ul li i:hover {
 
 /* media for 720px////////////////////////////////////////////////////////////// */
 @media screen and (min-width: 460px) {
-  #profile-setting {
+  .profile-setting-toggle {
     margin-left: -85px;
   }
 }
 
 /* media for 720px////////////////////////////////////////////////////////////// */
 @media screen and (min-width: 720px) {
-  #profile-setting {
+  .profile-setting-toggle {
     margin-left: -70px;
   }
 }
@@ -126,14 +124,21 @@ header nav ul li i:hover {
     margin-top: 12px;
     background-color: white;
     margin-right: 20px;
+  }
+  .profile-setting-toggle {
+    display: none;
     cursor: pointer;
+    /* margin-left: -100px; */
+    border: 2px solid gray;
+    margin-left: -90px;
+    width: 140px;
+    margin-top: -40px;
+    /* position: absolute; */
+    /* position: absolute; */
+    background-color: rgb(228, 228, 228);
   }
-  #profile-setting {
-    margin-left: -70px;
-    border: 2px solid green;
-    margin-top: -2000px;
-    margin-left: 3px;
-  }
+
+  /* #profile-setting  */
   header nav {
     width: 560px;
     margin: auto;

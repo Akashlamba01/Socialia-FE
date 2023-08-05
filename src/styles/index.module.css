@@ -1,0 +1,629 @@
+@keyframes shadow-inset-bottom {
+  0% {
+    -webkit-box-shadow: inset 0 0 0 0 rgba(255, 255, 255, 1);
+    box-shadow: inset 0 0 0 0 rgba(255, 255, 255, 1);
+  }
+  100% {
+    -webkit-box-shadow: inset 0 -22px 10px -8px rgba(117, 18, 58, 0.5);
+    box-shadow: inset 0 -22px 10px -8px rgba(117, 18, 58, 0.5);
+  }
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: "Comme";
+}
+a {
+  text-decoration: none;
+}
+
+/* headerrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr start */
+/* header end /////////////////////////////*/
+
+/* main container section  ////////////////////////////////////////////// */
+.mainContainer {
+  width: 100%;
+  /* width: 460px; */
+  /* max-width: 460px; */
+}
+/* friends container */
+.friendMessageContainer {
+  display: none;
+}
+
+/* post container///////////////////////////////////*/
+.createPost > div {
+  /* display: flex; */
+  padding: 12px 10px;
+  border-top: 1px solid rgb(193, 193, 193);
+  text-decoration: none;
+  /* color: black; */
+}
+
+.createPost > div a {
+  display: flex;
+  /* padding: 12px 10px; */
+  /* border-top: 1px solid rgb(193, 193, 193); */
+  text-decoration: none;
+  color: black;
+}
+
+.createPost > div:hover {
+  /* opacity: 0.9; */
+  background-color: rgb(249, 249, 249);
+  /* opacity: 0.9; */
+  cursor: pointer;
+}
+.createPost > div img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.inputTitle {
+  margin: 6px 10px 0;
+
+  width: 80%;
+  border-radius: 24px;
+  /* padding-top: 10px; */
+  background-color: rgb(238, 236, 236);
+  padding-top: 9px;
+  padding-left: 12px;
+  /* border: 2px solid red; */
+  height: 40px;
+}
+
+.createPost > div i {
+  font-size: 24px;
+  margin-top: 5px;
+  color: gray;
+}
+.createPost > div small {
+  font-size: 13px;
+  /* margin-top: -3px; */
+}
+
+.timelinePost {
+  border-top: 1px solid rgb(224, 224, 224);
+  margin: auto;
+  padding-top: 10px;
+  margin-bottom: 20px;
+}
+
+.timelineDetails {
+  /* display: flex; */
+  justify-content: space-between;
+  /* border: 2px solid red; */
+}
+
+.postProfileDetails {
+  padding: 0 15px;
+  display: flex;
+  /* border: 2px solid red; */
+
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.postUserProfile {
+  display: flex;
+  /* border: 2px solid red; */
+  width: 80%;
+}
+
+.postContent {
+  padding: 0 10px;
+}
+
+.postProfileImg {
+  width: 60px;
+  height: 60px;
+}
+
+.postProfileImg img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.postProfileName {
+  width: 60%;
+  /* border: 2px solid yellow; */
+  margin-left: 5px;
+  margin-top: 12px;
+  padding-left: 5px;
+}
+
+.postProfileName h3 {
+  font-size: 16px;
+  font-weight: bold;
+  font-family: "Comme";
+}
+.postProfileName h3 a {
+  color: black;
+}
+.postProfileName h3 a:hover {
+  text-decoration: underline;
+}
+
+.postProfileName span {
+  /* c; */
+  font-size: 12px;
+  color: rgb(88, 88, 88);
+}
+
+.postTogleBtn {
+  text-align: right;
+  /* border: 2px solid orange; */
+  margin-right: 0;
+  height: 20px;
+  margin-top: 3px;
+  /* align-items: right; */
+  /* float: right; */
+}
+
+.postTogleBtn button {
+  background-color: transparent;
+  border: none;
+}
+
+.postImg {
+  /* height: 500px; */
+  width: 100%;
+  /* width: 300px; */
+  /* border: 2px solid teal; */
+  /* background-color: rgb(164, 58, 58);
+  
+  border: 1px solid yellow; */
+  /* margin: 8px 0 3px; */
+  /* width: ; */
+  /* border: 2px solid blue; */
+  margin: 8px 0;
+}
+
+.postImg img {
+  width: 100%;
+  max-width: min-content;
+  max-height: 420px;
+}
+
+.likeComment {
+  /* border: 2px solid blue; */
+  display: flex;
+  justify-content: space-around;
+  margin: auto;
+  text-align: center;
+  /* padding: 0; */
+  /* height: 30px; */
+
+  width: 100%;
+}
+
+.postTimeline {
+  /* border: 2px solid green; */
+}
+
+.likeComment a {
+  height: 40px;
+  text-align: center;
+  /* width: 150px; */
+  /* border: 2px solid yellow; */
+  border-radius: 20px;
+}
+.likeComment a:hover {
+  opacity: 0.8;
+}
+.likeComment a button {
+  border: none;
+}
+.likeCommentBox {
+  /* border: 2px solid blue; */
+  font-size: 20px;
+  width: 100%;
+  border-radius: 20px;
+  background-color: rgb(211, 211, 211);
+  height: 100%;
+  width: 150px;
+  /* width: 150px; */
+}
+
+.likeCommentBox i {
+  color: rgb(117 18 58);
+}
+
+.likeCommentBox:hover {
+  /* opacity: 0.8; */
+  cursor: pointer;
+}
+/*  */
+/*  */
+/*  */
+
+/* media for 460px////////////////////////////////////////////////////////////// */
+@media screen and (min-width: 460px) {
+  .inputTitle {
+    padding-left: 16px;
+  }
+  .likeCommentBox {
+    width: 220px;
+  }
+}
+
+/* media for 720px////////////////////////////////////////////////////////////// */
+@media screen and (min-width: 720px) {
+  body {
+    width: 720px;
+    margin: auto;
+  }
+  .inputTitle {
+    height: 43px;
+    margin-top: 2px;
+    padding-top: 12px;
+  }
+}
+
+/* media for 1200px////////////////////////////////////////////////////////////// */
+@media screen and (min-width: 1200px) {
+  body {
+    width: 100%;
+  }
+
+  /* headerrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr start */
+
+  /* header end /////////////////////////////*/
+
+  .mainContainer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    top: 0;
+  }
+
+  /* friend container////////////////////////////////////////////////////////// */
+  .friendMessageContainer {
+    display: block;
+    width: 300px;
+    /* border: 2px solid black; */
+    height: 100vh;
+    overflow-y: scroll;
+    border-right: 2px solid rgb(184, 184, 184);
+    border-left: 2px solid rgb(184, 184, 184);
+  }
+  .friendMessageContainer::-webkit-scrollbar {
+    display: none;
+  }
+  .friendUserBoxContainer {
+    width: 300px;
+
+    border-right: 2px solid rgb(184, 184, 184);
+    border-left: 2px solid rgb(184, 184, 184);
+  }
+  .friendsHeading {
+    display: flex;
+    /* width: 90%; */
+    margin: 10px auto 0;
+    justify-content: space-between;
+    padding: 0 5%;
+    padding-bottom: 6px;
+    /* font-family: Calibri */
+    font-weight: bold;
+    padding-top: 65px;
+    border-bottom: 1px solid rgb(184, 184, 184);
+    /* border: 2px solid red; */
+  }
+
+  .chatBox {
+    /* display: none; */
+    /* border: 2px solid blue; */
+    background-color: black;
+    top: 100px;
+    right: 340px;
+    position: fixed;
+    width: 360px;
+    height: 450px;
+    border-radius: 30px 0px 30px 30px;
+  }
+  .friendsHeading h1 {
+    font-size: 24px;
+  }
+
+  .chatOne {
+    /* border: 2px solid red; */
+    width: 30px;
+    right: 310px;
+    height: 30px;
+    position: fixed;
+    background-color: black;
+    border: 1px solid transparent;
+    border-right: none;
+    border-bottom: 1px solid transparent;
+  }
+  .chatTwo {
+    width: 30px;
+    height: 35px;
+    border-radius: 30px 0 0 0;
+    background-color: white;
+    border-right: 2px solid white;
+    border-bottom: none;
+  }
+  .friendsHeading > form {
+    margin-top: 2px;
+    /* margin-left: 10px; */
+    /* border: 2px solid red; */
+    width: 200px;
+  }
+  .friendsHeading > form input {
+    background-color: rgb(249, 249, 249);
+    height: 20px;
+    margin-left: 13px;
+    height: 30px;
+    padding-left: 4px;
+    border-radius: 5px;
+    margin-top: -12px;
+    font-size: 18px;
+    width: 162px;
+  }
+  .friendsHeading > form button {
+    margin-left: -24px;
+    background-color: transparent;
+    border: none;
+  }
+  .friendUserBox {
+    /* border: 1px solid rgb(146, 146, 146); */
+    /* margin-top: 4px; */
+    /* width: 90%; */
+    margin: auto;
+    padding: 10px 5%;
+
+    /* padding-bottom: 10px; */
+  }
+
+  /* .friend-user-box-innerbox {
+  } */
+  .requestHeading {
+    display: flex;
+    justify-content: space-between;
+  }
+  .requestHeading a {
+    color: blue;
+    text-decoration: underline;
+  }
+  .usersBox {
+    margin-top: 6px;
+    padding: 10px;
+    /* border: 2px solid green; */
+    /* border-top: 1px solid rgb(146, 146, 146); */
+    /* border-bottom: 2px solid rgb(146, 146, 146); */
+    display: flex;
+    border-radius: 16px;
+    transition: 500ms;
+  }
+
+  .usersBox:hover {
+    background-color: rgba(249, 249, 249);
+    box-shadow: 0px 0px 0px 1px rgba(119, 119, 119, 0.57);
+    /* border: 1px solid rgb(249, 249, 249); */
+  }
+  .usersImg {
+    width: 70px;
+    height: 70px;
+    /* border: 2px solid green; */
+  }
+  .usersImg img {
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+  }
+  .usersName {
+    /* border: 2px solid red; */
+    /* padding: 10px 0; */
+    /* padding-left: 8px; */
+    margin-left: 10px;
+    width: 200px;
+  }
+
+  .usersName h3 {
+    /* border: 2px solid yellow; */
+    margin-top: 4px;
+    overflow: hidden;
+    height: 20px;
+    /* height: 20px; */
+  }
+  .usersNameMessage {
+    padding-top: 10px;
+    color: black;
+  }
+  .usersName h3 a {
+    color: black;
+  }
+  .chatMessage {
+    /* border: 2px solid blue; */
+    width: 150px;
+    height: 18px;
+    overflow: hidden;
+    color: rgb(88, 88, 88);
+  }
+  .confirmAddBtnsBox {
+    display: flex;
+    /* border: 2px solid yellow; */
+    margin-top: 4px;
+    /* justify-content: space-between; */
+  }
+
+  .confirmAddBtns {
+    /* border: 2px solid rgb(34, 0, 255); */
+    margin-right: 5px;
+    /* width: 100%; */
+    width: 80px;
+    padding: 5px 0;
+    margin-top: 6px;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 5px;
+  }
+
+  .colorEdRed {
+    background-color: rgb(117 18 58);
+    color: white;
+  }
+  .colorEdGray {
+    color: white;
+    background-color: rgb(156, 156, 156);
+  }
+
+  .confirmAddBtns:hover {
+    text-decoration: underline;
+    opacity: 0.8;
+  }
+
+  /* main-container ///////////////////////////////////////////////////////// */
+  .timelinePost {
+    border-top: none;
+    margin-top: 10px;
+  }
+  .postTimeline {
+    width: 560px;
+    /* border: 2px solid black; */
+    overflow-y: scroll;
+    /* padding-top: 50px; */
+    height: 100vh;
+    /* margin: auto; */
+    /* border: 1px solid black; */
+  }
+  .postTimeline::-webkit-scrollbar {
+    display: none;
+  }
+  .createPost {
+    margin-top: 80px;
+    /* border-top: none; */
+  }
+  .createPost > div {
+    border-top: none;
+    border: 1px solid rgb(184, 184, 185);
+    padding: 20px 30px;
+    /* background-color: rgba(0, 0, 0, 0.461); */
+    border-radius: 20px;
+  }
+
+  .inputTitle {
+    padding-left: 20px;
+  }
+
+  /* edit kran h yah se */
+  .postImg {
+    /* height: 500px; */
+    /* width: 100%; */
+    /* width: 300px; */
+    /* border: 2px solid teal; */
+    /* background-color: rgb(164, 58, 58);
+    border: 1px solid yellow; */
+    /* margin: 8px 0 3px; */
+    /* width: ; */
+    /* max-width: 532px; */
+    /* width: 532; */
+
+    margin: 10px 0;
+    padding: 0;
+    /* width: 100%; */
+    /* background-color: rgb(215, 215, 215); */
+  }
+  .postImg img {
+    max-width: min-content;
+    max-height: 520px;
+    margin-bottom: -4px;
+  }
+  /* .post-img img {
+    margin: 8px 0;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+    width: 100%;
+  } */
+  /* yah tkkkkkkkkkkkkkkkkk */
+  .timelinePost {
+    border: 1px solid rgb(184, 184, 185);
+    padding: 20px 30px;
+    background-color: rgb(249, 249, 249);
+    border-radius: 20px;
+    /* box-shadow: 0 0 1px 2px 1px gray; */
+    /* box-shadow: 5px 5px blue, 10px 10px red, 15px 15px green; */
+    /* box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 1); */
+  }
+  .likeComment {
+    margin-bottom: 10px;
+  }
+  .likeCommentBox {
+    height: 45px;
+  }
+
+  #main-container #messages-and-list {
+    width: 300px;
+    border-left: 2px solid rgb(184, 184, 185);
+
+    height: 100vh;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .friendMessageContainer {
+    width: 360px;
+    /* border: 2px solid red; */
+  }
+  .friendsHeading > form input {
+    width: 180px;
+    /* height: 30px; */
+    /* background-color: rebeccapurple; */
+  }
+
+  .chatBox {
+    right: 400px;
+  }
+
+  .chatOne {
+    /* border: 2px solid red; */
+    /* width: 30px; */
+    right: 370px;
+    /* height: 30px; */
+    /* position: fixed; */
+    /* background-color: black; */
+    /* border: 1px solid transparent;
+    border-right: none;
+    border-bottom: 1px solid transparent; */
+  }
+  /* #chat-two {
+    width: 30px;
+    height: 35px;
+    border-radius: 30px 0 0 0;
+    background-color: white;
+    border-right: 2px solid white;
+    border-bottom: none;
+  } */
+
+  .postTimeline {
+    width: 660px;
+    /* border: 2px solid yellow; */
+  }
+
+  .friendUserBoxContainer {
+    width: 360px;
+  }
+
+  #main-container #messages-and-list {
+    width: 360px;
+  }
+}
+
+/* body {
+   
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    -webkit-filter: blur(5px); 
+    Safari 6.0 - 9.0
+    filter: blur(5px);
+  
+} */

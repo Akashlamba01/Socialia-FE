@@ -1,53 +1,25 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import toastStyle from "../styles/toast.module.css";
-import { login } from "../api";
+import { useAuth, useProvideAuth } from "../hooks";
 
 const Login = ({ styles }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loggingIn, setLoggingIn] = useState(false);
 
+  const auth = useAuth();
+  console.log(auth);
+
   const showToastMessage = () => {
-    console.log("jjjj");
+    // console.log("jjjj");
     toast.success("Error ", {
       position: toast.POSITION.TOP_RIGHT,
       className: `${toastStyle.success}`,
     });
   };
-
-  // const login = API_URLS.login;
-
-  // const userLogin = async (email, password) => {
-  //   await fetch("http://localhost:8000/users/create-session", {
-  //     method: "POST",
-  //     body: JSON.stringify({
-  //       email,
-  //       password,
-  //       // userId: Math.random().toString(36).slice(2),
-  //     }),
-  //     headers: {
-  //       "Content-type": "application/json; charset=UTF-8",
-  //       // "Access-Control-Allow-Origin": "http://localhost:3000",
-  //       "Access-Control-Allow-Origin": "*",
-  //       "Access-Control-Allow-Credentials": "true",
-  //     },
-  //   })
-  //     .then((response) => {
-  //       toast.success("Error ", {
-  //         position: toast.POSITION.TOP_RIGHT,
-  //         className: `${toastStyle.success}`,
-  //       });
-  //       response.json();
-  //     })
-  //     .catch((err) => {
-  //       console.log(err.message);
-  //     });
-  // };
-
-  // useEffect({});
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -61,7 +33,7 @@ const Login = ({ styles }) => {
       });
     }
 
-    const response = await login(email, password);
+    const response = await auth.login(email, password);
 
     if (response.success) {
       toast.success("Loged in successfully! ", {

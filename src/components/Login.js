@@ -74,7 +74,13 @@ const Login = ({ styles }) => {
         // className: `${toastStyle.success}`,
       });
     }
+
     setLoggingIn(false);
+  };
+
+  const handleGuest = (e) => {
+    setEmail("guest@gmail.com");
+    setPassword("Guest@1234");
   };
 
   return (
@@ -89,19 +95,22 @@ const Login = ({ styles }) => {
           <input
             type="text"
             placeholder="Email"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
           />
+
           <input
             type="password"
             placeholder="Password"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
           />
           <button type="submit" disabled={loggingIn}>
             {loggingIn ? "Logging in..." : "Log In"}
           </button>
         </form>
+        <button onClick={handleGuest}>Log In as a Guest</button>
+        <br />
         <br />
         <p>
           <Link to="">Forgotten Password?</Link>

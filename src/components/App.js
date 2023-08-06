@@ -12,6 +12,7 @@ import {
 import { Routes, Route, BrowserRouter, useNavigate } from "react-router-dom";
 import { Navbar, Signup } from "./index";
 import Loading from "./Loading";
+import { useAuth } from "../hooks";
 
 function App() {
   // useEffect(() => {
@@ -34,6 +35,9 @@ function App() {
       setLoading(false);
     }, 2000);
   }, []);
+
+  // const auth = useAuth();
+  // console.log(auth);
 
   if (loading) {
     return <Loading />;

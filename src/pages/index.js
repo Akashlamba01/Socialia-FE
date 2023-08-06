@@ -4,6 +4,7 @@ import NotificationsPage from "./NotificationsPage";
 import MessagesPage from "./MessagesPage";
 import ProfilePage from "./ProfilePage";
 import LoginPage from "./LoginPage";
+import SignupPage from "./SignupPage";
 
 export {
   Home,
@@ -12,4 +13,5 @@ export {
   MessagesPage,
   FriendsPage,
   LoginPage,
+  SignupPage,
 };

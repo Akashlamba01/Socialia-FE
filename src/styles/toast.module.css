@@ -1,0 +1,9 @@
+.success {
+  background: "darkblue";
+  color: red;
+  /* color: "#fff"; */
+  font-size: "20px";
+  border: 2px solid yellow;
+  width: "34vw";
+  padding: "30px 20px";
+}

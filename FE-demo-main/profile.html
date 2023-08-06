@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Real-time Updates: Utilized WebSocket technology (e.g., Socket.io) to provide real-time notifications and updates to users.  -->
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Socialia | Home</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Comme&family=Edu+NSW+ACT+Foundation:wght@500&family=Pacifico&display=swap"
+      rel="stylesheet" />
+
+    <!-- css links/////////// -->
+    <link rel="stylesheet" href="style/_header.css" />
+    <link rel="stylesheet" href="style/index.css" />
+    <!-- <link rel="stylesheet" href="style/friend.css" /> -->
+
+    <script
+      src="https://kit.fontawesome.com/8ff5f3e8e1.js"
+      crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    <header>
+      <div class="heading-section">
+        <a href="">
+          <h1 class="heading">Socialia</h1>
+        </a>
+
+        <div>
+          <div onclick="toggleSettingBtn()" id="show">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+          <div class="profile-setting-toggle" id="profile-setting">
+            <div onclick="toggleSettingBtn()">
+              <a> cencel </a>
+            </div>
+            <div>
+              <a href="">profile</a>
+            </div>
+            <div>
+              <a href="">update profile</a>
+            </div>
+            <div>
+              <a href="">settings</a>
+            </div>
+            <div>
+              <a href="">logout</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <nav>
+        <ul>
+          <li>
+            <a href="./index.html"><i class="fa-solid fa-house"></i> </a>
+          </li>
+          <li>
+            <a href="./friends.html"><i class="fa-solid fa-user-group"></i></a>
+          </li>
+          <li class="display-none-icon">
+            <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
+          </li>
+
+          <li class="display-none-icon">
+            <a href=""><i class="fa-solid fa-message"></i></a>
+          </li>
+
+          <li>
+            <a href="./notification.html"><i class="fa-solid fa-bell"></i></a>
+          </li>
+          <li class="login">
+            <a href="#"><i class="fa-solid fa-user activate"></i></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+  </body>
+</html>

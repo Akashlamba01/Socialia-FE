@@ -1,5 +1,6 @@
 import React from "react";
 import img from "./img.jpg";
+import { Link } from "react-router-dom";
 
 const Messages = ({ styles }) => {
   return (
@@ -19,7 +20,7 @@ const Messages = ({ styles }) => {
         {/* <!-- request heading  --> */}
         <div className={styles.requestHeading}>
           <h3>Recent Chats</h3>
-          <a href="">See All</a>
+          <Link to="">See All</Link>
         </div>
 
         {/* <!-- request friend box start--> */}
@@ -30,7 +31,7 @@ const Messages = ({ styles }) => {
 
           <div className={styles.usersName}>
             <h3>
-              <a href=""> Akash Lamba kumar singh</a>
+              <Link to=""> Akash Lamba kumar singh</Link>
             </h3>
             <div className={styles.confirmAddBtnsBox}>
               <div className={styles.chatMessage}>
@@ -47,7 +48,7 @@ const Messages = ({ styles }) => {
         {/* <!-- request heading  --> */}
         <div className={styles.requestHeading}>
           <h3>Groups</h3>
-          <a href="">See All</a>
+          <Link to="">See All</Link>
         </div>
 
         {/* <!-- request user box start--> */}
@@ -58,7 +59,7 @@ const Messages = ({ styles }) => {
 
           <div className={styles.usersName}>
             <h3>
-              <a href=""> Akash Lamba kumar singh</a>
+              <Link to=""> Akash Lamba kumar singh</Link>
             </h3>
             <div className={styles.confirmAddBtnsBox}>
               <div className={styles.chatMessage}>

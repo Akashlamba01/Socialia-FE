@@ -1,5 +1,7 @@
 import React from "react";
 import img from "./img.jpg";
+import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 const Friends = ({ styles }) => {
   return (
@@ -22,7 +24,7 @@ const Friends = ({ styles }) => {
         {/* <!-- request heading  --> */}
         <div className={styles.requestHeading}>
           <h3>Friend requests</h3>
-          <a href="">See All</a>
+          <Link to="">See All</Link>
         </div>
 
         {/* <!-- request friend box start--> */}
@@ -33,10 +35,10 @@ const Friends = ({ styles }) => {
 
           <div className={styles.usersName}>
             <h3>
-              <a href=""> Akash Lamba kumar singh</a>
+              <Link to=""> Akash Lamba kumar singh</Link>
             </h3>
             <div className={styles.confirmAddBtnsBox}>
-              <a href="">
+              <Link to="">
                 <div
                   className={styles.confirmAddBtns}
                   style={{
@@ -47,9 +49,9 @@ const Friends = ({ styles }) => {
                   {/* styles.colorEdRed */}
                   Confirm
                 </div>
-              </a>
+              </Link>
 
-              <a href="">
+              <Link to="">
                 <div
                   className={styles.confirmAddBtns}
                   id="friend-delete-btn"
@@ -60,7 +62,7 @@ const Friends = ({ styles }) => {
                   }}>
                   Remove
                 </div>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -72,7 +74,7 @@ const Friends = ({ styles }) => {
         {/* <!-- request heading  --> */}
         <div className={styles.requestHeading}>
           <h3>People in Socialia</h3>
-          <a href="">See All</a>
+          <Link to="">See All</Link>
         </div>
 
         {/* <!-- request user box start--> */}
@@ -83,10 +85,10 @@ const Friends = ({ styles }) => {
 
           <div className={styles.usersName}>
             <h3>
-              <a href=""> Akash Lamba kumar singh</a>
+              <Link to=""> Akash Lamba kumar singh</Link>
             </h3>
             <div className={styles.confirmAddBtnsBox}>
-              <a href="">
+              <Link to="">
                 <div
                   className={styles.confirmAddBtns}
                   style={{
@@ -97,9 +99,9 @@ const Friends = ({ styles }) => {
                   {/* styles.colorEdRed */}
                   Add
                 </div>
-              </a>
+              </Link>
 
-              <a href="">
+              <Link to="">
                 <div
                   className={styles.confirmAddBtns}
                   id="friend-delete-btn"
@@ -110,7 +112,7 @@ const Friends = ({ styles }) => {
                   }}>
                   Remove
                 </div>
-              </a>
+              </Link>
             </div>
           </div>
         </div>

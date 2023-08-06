@@ -1,0 +1,609 @@
+@keyframes shadow-inset-bottom {
+  0% {
+    -webkit-box-shadow: inset 0 0 0 0 rgba(255, 255, 255, 1);
+    box-shadow: inset 0 0 0 0 rgba(255, 255, 255, 1);
+  }
+  100% {
+    -webkit-box-shadow: inset 0 -22px 10px -8px rgba(117, 18, 58, 0.5);
+    box-shadow: inset 0 -22px 10px -8px rgba(117, 18, 58, 0.5);
+  }
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: "Comme";
+}
+a {
+  text-decoration: none;
+}
+
+/* headerrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr start */
+/* header end /////////////////////////////*/
+
+/* main container section  ////////////////////////////////////////////// */
+#main-container {
+  width: 100%;
+  /* width: 460px; */
+  /* max-width: 460px; */
+}
+/* friends container */
+.friend-message-container {
+  display: none;
+}
+
+/* post container///////////////////////////////////*/
+.create-post > div {
+  /* display: flex; */
+  padding: 12px 10px;
+  border-top: 1px solid rgb(193, 193, 193);
+  text-decoration: none;
+  /* color: black; */
+}
+
+.create-post > div a {
+  display: flex;
+  /* padding: 12px 10px; */
+  /* border-top: 1px solid rgb(193, 193, 193); */
+  text-decoration: none;
+  color: black;
+}
+
+.create-post > div:hover {
+  /* opacity: 0.9; */
+  background-color: rgb(249, 249, 249);
+  opacity: 0.9;
+  cursor: pointer;
+}
+.create-post > div img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.create-post > div .input-title {
+  height: 28px;
+  margin: 6px 10px 0;
+
+  width: 80%;
+  border-radius: 24px;
+  /* padding-top: 10px; */
+  background-color: rgb(238, 236, 236);
+  padding-top: 9px;
+  padding-left: 12px;
+  /* border: 2px solid red; */
+}
+
+.create-post > div i {
+  font-size: 24px;
+  margin-top: 5px;
+  color: gray;
+}
+.create-post > div small {
+  font-size: 13px;
+  /* margin-top: -3px; */
+}
+
+#main-container .timeline-post {
+  border-top: 1px solid rgb(224, 224, 224);
+  margin: auto;
+  padding-top: 10px;
+  margin-bottom: 20px;
+}
+
+#main-container .timeline-post .timeline-details {
+  /* display: flex; */
+  justify-content: space-between;
+  border: 2px solid red;
+}
+
+.post-profile-details {
+  padding: 0 15px;
+  display: flex;
+  /* border: 2px solid red; */
+
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.post-user-profile {
+  display: flex;
+  /* border: 2px solid red; */
+  width: 80%;
+}
+
+.post-content {
+  padding: 0 10px;
+}
+
+.post-profile-details .post-profile-img {
+  width: 60px;
+  height: 60px;
+}
+
+.post-profile-img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.post-profile-details .post-profile-name {
+  width: 60%;
+  /* border: 2px solid yellow; */
+  margin-left: 5px;
+  margin-top: 12px;
+  padding-left: 5px;
+}
+
+.post-profile-name h3 {
+  font-size: 16px;
+  font-weight: bold;
+  font-family: "Comme";
+}
+.post-profile-name h3 a {
+  color: black;
+}
+.post-profile-name h3 a:hover {
+  text-decoration: underline;
+}
+
+.post-profile-name span {
+  /* c; */
+  font-size: 12px;
+  color: rgb(88, 88, 88);
+}
+
+.post-profile-details .post-togle-btn {
+  text-align: right;
+  /* border: 2px solid orange; */
+  margin-right: 0;
+  height: 20px;
+  margin-top: 3px;
+  /* align-items: right; */
+  /* float: right; */
+}
+
+.post-togle-btn button {
+  background-color: transparent;
+  border: none;
+}
+
+.timeline-post .post-img {
+  /* height: 500px; */
+  width: 100%;
+  /* width: 300px; */
+  /* border: 2px solid teal; */
+  /* background-color: rgb(164, 58, 58);
+  
+  border: 1px solid yellow; */
+  /* margin: 8px 0 3px; */
+  /* width: ; */
+  /* border: 2px solid blue; */
+  margin: 8px 0;
+}
+
+.post-img img {
+  width: 100%;
+  max-width: min-content;
+  max-height: 420px;
+}
+
+.timeline-post .like-comment {
+  /* border: 2px solid blue; */
+  display: flex;
+  justify-content: space-around;
+  margin: auto;
+  text-align: center;
+  /* padding: 0; */
+  /* height: 30px; */
+
+  width: 100%;
+}
+
+.like-comment a {
+  height: 40px;
+  text-align: center;
+  /* width: 150px; */
+  /* border: 2px solid yellow; */
+  border-radius: 20px;
+}
+.like-comment a:hover {
+  opacity: 0.8;
+}
+.like-comment a button {
+  border: none;
+}
+.like-comment .like-comment-box {
+  /* border: 2px solid blue; */
+  font-size: 20px;
+  width: 100%;
+  border-radius: 20px;
+  background-color: rgb(211, 211, 211);
+  height: 100%;
+  width: 150px;
+  /* width: 150px; */
+}
+
+.like-comment-box i {
+  color: rgb(117 18 58);
+}
+
+.like-comment-box:hover {
+  /* opacity: 0.8; */
+  cursor: pointer;
+}
+/*  */
+/*  */
+/*  */
+
+/* media for 460px////////////////////////////////////////////////////////////// */
+@media screen and (min-width: 460px) {
+  .create-post > div .input-title {
+    padding-left: 16px;
+  }
+  .like-comment .like-comment-box {
+    width: 220px;
+  }
+}
+
+/* media for 720px////////////////////////////////////////////////////////////// */
+@media screen and (min-width: 720px) {
+  body {
+    width: 720px;
+    margin: auto;
+  }
+  .create-post > div .input-title {
+    height: 32px;
+    margin-top: 2px;
+    padding-top: 12px;
+  }
+}
+
+/* media for 1200px////////////////////////////////////////////////////////////// */
+@media screen and (min-width: 1200px) {
+  body {
+    width: 100%;
+  }
+
+  /* headerrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr start */
+
+  /* header end /////////////////////////////*/
+
+  #main-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    top: 0;
+  }
+
+  /* friend container////////////////////////////////////////////////////////// */
+  #main-container .friend-message-container {
+    display: block;
+    width: 300px;
+    /* border: 2px solid black; */
+    height: 100vh;
+    overflow-y: scroll;
+    border-right: 2px solid rgb(184, 184, 184);
+    border-left: 2px solid rgb(184, 184, 184);
+  }
+  .friend-message-container::-webkit-scrollbar {
+    display: none;
+  }
+  .friends-heading {
+    display: flex;
+    /* width: 90%; */
+    margin: 10px auto 0;
+    justify-content: space-between;
+    padding: 0 5%;
+    padding-bottom: 6px;
+    /* font-family: Calibri */
+    font-weight: bold;
+    padding-top: 65px;
+    border-bottom: 1px solid rgb(184, 184, 184);
+    /* border: 2px solid red; */
+  }
+  #chat-box {
+    /* display: none; */
+    /* border: 2px solid blue; */
+    background-color: black;
+    top: 100px;
+    right: 340px;
+    position: fixed;
+    width: 360px;
+    height: 450px;
+    border-radius: 30px 0px 30px 30px;
+  }
+  #chat-one {
+    /* border: 2px solid red; */
+    width: 30px;
+    right: 310px;
+    height: 30px;
+    position: fixed;
+    background-color: black;
+    border: 1px solid transparent;
+    border-right: none;
+    border-bottom: 1px solid transparent;
+  }
+  #chat-two {
+    width: 30px;
+    height: 35px;
+    border-radius: 30px 0 0 0;
+    background-color: white;
+    border-right: 2px solid white;
+    border-bottom: none;
+  }
+  .friends-heading > form {
+    margin-top: 2px;
+    /* margin-left: 10px; */
+    /* border: 2px solid red; */
+    width: 200px;
+  }
+  .friends-heading > form input {
+    background-color: rgb(249, 249, 249);
+    height: 20px;
+    margin-left: 13px;
+    height: 30px;
+    padding-left: 4px;
+    border-radius: 5px;
+    margin-top: -12px;
+    font-size: 18px;
+    width: 162px;
+  }
+  .friends-heading > form button {
+    margin-left: -24px;
+    background-color: transparent;
+    border: none;
+  }
+  .friends-heading > form i {
+  }
+  .friend-user-box {
+    /* border: 1px solid rgb(146, 146, 146); */
+    /* margin-top: 4px; */
+    /* width: 90%; */
+    margin: auto;
+    padding: 10px 5%;
+
+    /* padding-bottom: 10px; */
+  }
+
+  /* .friend-user-box-innerbox {
+  } */
+  .friend-user-box .request-heading {
+    display: flex;
+    justify-content: space-between;
+  }
+  .friend-user-box .request-heading a {
+    color: blue;
+    text-decoration: underline;
+  }
+  .users-box {
+    margin-top: 6px;
+    padding: 10px;
+    /* border: 2px solid green; */
+    /* border-top: 1px solid rgb(146, 146, 146); */
+    /* border-bottom: 2px solid rgb(146, 146, 146); */
+    display: flex;
+    border-radius: 16px;
+    transition: 500ms;
+  }
+
+  .users-box:hover {
+    background-color: rgba(249, 249, 249);
+    box-shadow: 0px 0px 0px 1px rgba(119, 119, 119, 0.57);
+    /* border: 1px solid rgb(249, 249, 249); */
+  }
+  .users-box .users-img {
+    width: 70px;
+    height: 70px;
+    /* border: 2px solid green; */
+  }
+  .users-img img {
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+  }
+  .users-box .users-name {
+    /* border: 2px solid red; */
+    /* padding: 10px 0; */
+    /* padding-left: 8px; */
+    margin-left: 10px;
+    width: 200px;
+  }
+
+  .users-name h3 {
+    /* border: 2px solid yellow; */
+    padding-top: 4px;
+    overflow: hidden;
+    height: 20px;
+    /* height: 20px; */
+  }
+  .users-box .users-name .users-name-message {
+    padding-top: 10px;
+    color: black;
+  }
+  .users-name h3 a {
+    color: black;
+  }
+  .users-name .chat-message {
+    /* border: 2px solid blue; */
+    width: 150px;
+    height: 18px;
+    overflow: hidden;
+    color: rgb(88, 88, 88);
+  }
+  .users-name .confirm-add-btns-box {
+    display: flex;
+    /* border: 2px solid yellow; */
+    margin-top: 4px;
+    /* justify-content: space-between; */
+  }
+
+  .confirm-add-btns-box .confirm-add-btns {
+    /* border: 2px solid rgb(34, 0, 255); */
+    margin-right: 5px;
+    /* width: 100%; */
+    width: 80px;
+    padding: 5px 0;
+    margin-top: 6px;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 5px;
+  }
+
+  .confirm-add-btns-box #friend-confirm-btn {
+    background-color: rgb(117 18 58);
+    color: white;
+  }
+  .confirm-add-btns-box #friend-delete-btn {
+    color: white;
+    background-color: rgb(156, 156, 156);
+  }
+
+  .confirm-add-btns:hover {
+    text-decoration: underline;
+    opacity: 0.8;
+  }
+
+  /* main-container ///////////////////////////////////////////////////////// */
+  #main-container .timeline-post {
+    border-top: none;
+    margin-top: 10px;
+  }
+  #main-container #post-timeline {
+    width: 560px;
+    /* border: 2px solid black; */
+    overflow-y: scroll;
+    /* padding-top: 50px; */
+    height: 100vh;
+    /* margin: auto; */
+    /* border: 1px solid black; */
+  }
+  #main-container #post-timeline::-webkit-scrollbar {
+    display: none;
+  }
+  #main-container #post-timeline .create-post {
+    margin-top: 80px;
+    /* border-top: none; */
+  }
+  .create-post > div {
+    border-top: none;
+    border: 1px solid rgb(184, 184, 185);
+    padding: 20px 30px;
+    /* background-color: rgba(0, 0, 0, 0.461); */
+    border-radius: 20px;
+  }
+  .create-post > div .input-title {
+    padding-left: 20px;
+  }
+
+  /* edit kran h yah se */
+  .timeline-post .post-img {
+    /* height: 500px; */
+    /* width: 100%; */
+    /* width: 300px; */
+    /* border: 2px solid teal; */
+    /* background-color: rgb(164, 58, 58);
+    border: 1px solid yellow; */
+    /* margin: 8px 0 3px; */
+    /* width: ; */
+    /* max-width: 532px; */
+    /* width: 532; */
+
+    margin: 10px 0;
+    padding: 0;
+    /* width: 100%; */
+    /* background-color: rgb(215, 215, 215); */
+  }
+  .post-img img {
+    max-width: min-content;
+    max-height: 520px;
+    margin-bottom: -4px;
+  }
+  /* .post-img img {
+    margin: 8px 0;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+    width: 100%;
+  } */
+  /* yah tkkkkkkkkkkkkkkkkk */
+  #post-timeline .timeline-post {
+    border: 1px solid rgb(184, 184, 185);
+    padding: 20px 30px;
+    background-color: rgb(249, 249, 249);
+    border-radius: 20px;
+    /* box-shadow: 0 0 1px 2px 1px gray; */
+    /* box-shadow: 5px 5px blue, 10px 10px red, 15px 15px green; */
+    /* box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 1); */
+  }
+  .timeline-post .like-comment {
+    margin-bottom: 10px;
+  }
+  .like-comment .like-comment-box {
+    height: 45px;
+  }
+
+  #main-container #messages-and-list {
+    width: 300px;
+    border-left: 2px solid rgb(184, 184, 185);
+
+    height: 100vh;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  #main-container .friend-message-container {
+    width: 360px;
+  }
+  .friends-heading > form input {
+    width: 180px;
+    /* height: 30px; */
+    /* background-color: rebeccapurple; */
+  }
+
+  #chat-box {
+    right: 400px;
+  }
+
+  #chat-one {
+    /* border: 2px solid red; */
+    /* width: 30px; */
+    right: 370px;
+    /* height: 30px; */
+    /* position: fixed; */
+    /* background-color: black; */
+    /* border: 1px solid transparent;
+    border-right: none;
+    border-bottom: 1px solid transparent; */
+  }
+  /* #chat-two {
+    width: 30px;
+    height: 35px;
+    border-radius: 30px 0 0 0;
+    background-color: white;
+    border-right: 2px solid white;
+    border-bottom: none;
+  } */
+
+  #main-container #post-timeline {
+    width: 660px;
+  }
+
+  #main-container #messages-and-list {
+    width: 360px;
+  }
+}
+
+/* body {
+   
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    -webkit-filter: blur(5px); 
+    Safari 6.0 - 9.0
+    filter: blur(5px);
+  
+} */

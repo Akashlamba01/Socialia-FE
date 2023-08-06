@@ -1,0 +1,363 @@
+a {
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+  /* top: 0; */
+  /* top: 60px; */
+}
+
+#friend-container {
+  width: 100%;
+}
+
+/* friend search type///////////////////////////////////////////////////// */
+#friend-container .frined-search-type {
+  display: none;
+}
+
+/* main continer message start//////////////////////////////////// */
+#friend-container .friend-message-container {
+  display: block;
+  width: 100%;
+  border-top: 1px solid rgb(156, 156, 156);
+}
+.friend-message-container .friends-heading-min-length {
+  /* border: 2px solid green; */
+  margin: auto;
+  /* border-bottom: 1px solid rgb(156, 156, 156); */
+  padding: 0 5%;
+}
+.friend-message-container .friends-heading-min-length h1 {
+  margin-bottom: 5px;
+}
+.friend-message-container .friends-heading-min-length > small {
+  /* margin: 0 5px 5px; */
+  margin-top: 5px;
+  border-radius: 10px;
+  background-color: rgb(230, 229, 229);
+  /* padding: 1px 3px; */
+  margin-right: 4px;
+  padding: 3px 8px;
+}
+
+.friend-message-container .friends-heading-min-length > small a {
+  color: black;
+}
+
+.friend-message-container .friends-heading-min-length > div {
+  display: flex;
+  /* justify-content: space-between; */
+  flex-wrap: wrap;
+}
+.friend-message-container .friends-heading-min-length > div > a {
+  border: 1px solid gray;
+  padding: 2px 8px;
+  background-color: rgb(230, 229, 229);
+  border-radius: 16px;
+  margin-right: 4px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+.friends-heading {
+  display: flex;
+  /* width: 90%; */
+  margin: 10px auto 0;
+  justify-content: space-between;
+  padding: 0 5%;
+  padding-bottom: 6px;
+  /* font-family: Calibri */
+  font-weight: bold;
+  border-bottom: 1px solid rgb(184, 184, 184);
+  /* border: 
+  2px solid red; */
+}
+
+.friends-heading > form {
+  margin-top: 2px;
+  /* margin-left: 10px; */
+  /* border: 2px solid red; */
+  width: 200px;
+}
+
+.friends-heading > form button {
+  margin-left: -24px;
+  background-color: transparent;
+  border: none;
+}
+.friend-user-box {
+  /* border: 1px solid rgb(146, 146, 146); */
+  /* margin-top: 4px; */
+  /* width: 90%; */
+  margin: auto;
+  padding: 10px 5%;
+
+  /* padding-bottom: 10px; */
+}
+/* .friend-user-box-innerbox {
+} */
+.friend-user-box .request-heading {
+  display: flex;
+  justify-content: space-between;
+}
+.friend-user-box .request-heading a {
+  color: blue;
+  text-decoration: underline;
+}
+.users-box {
+  margin-top: 6px;
+  padding: 10px;
+  /* border: 2px solid green; */
+  /* border-top: 1px solid rgb(146, 146, 146); */
+  /* border-bottom: 2px solid rgb(146, 146, 146); */
+  display: flex;
+  border-radius: 16px;
+  transition: 500ms;
+  border: 1px solid rgb(184, 184, 184);
+}
+
+.users-box:hover {
+  background-color: rgba(249, 249, 249);
+  box-shadow: 0px 0px 0px 1px rgba(119, 119, 119, 0.57);
+  /* border: 1px solid rgb(249, 249, 249); */
+}
+.users-box .users-img {
+  width: 70px;
+  height: 70px;
+  /* border: 2px solid green; */
+}
+.users-img img {
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+}
+.users-box .users-name {
+  /* border: 2px solid red; */
+  /* padding: 10px 0; */
+  /* padding-left: 8px; */
+  margin-left: 10px;
+  width: 200px;
+}
+
+.users-name h3 {
+  /* border: 2px solid yellow; */
+  padding-top: 4px;
+  overflow: hidden;
+  height: 20px;
+  /* height: 20px; */
+}
+.users-box .users-name .users-name-message {
+  padding-top: 10px;
+  color: black;
+}
+.users-name h3 a {
+  color: black;
+}
+.users-name .chat-message {
+  /* border: 2px solid blue; */
+  width: 150px;
+  height: 18px;
+  overflow: hidden;
+  color: rgb(88, 88, 88);
+}
+.users-name .confirm-add-btns-box {
+  display: flex;
+  /* border: 2px solid yellow; */
+  margin-top: 4px;
+  /* justify-content: space-between; */
+}
+
+.confirm-add-btns-box .confirm-add-btns {
+  /* border: 2px solid rgb(34, 0, 255); */
+  margin-right: 5px;
+  /* width: 100%; */
+  width: 80px;
+  padding: 5px 0;
+  margin-top: 6px;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.confirm-add-btns-box .friend-confirm-btn {
+  background-color: rgb(117 18 58);
+  color: white;
+}
+.confirm-add-btns-box .friend-open-profile-btn {
+  width: 175px;
+}
+.confirm-add-btns-box #friend-delete-btn {
+  color: white;
+  background-color: rgb(156, 156, 156);
+}
+
+.confirm-add-btns:hover {
+  text-decoration: underline;
+  opacity: 0.8;
+}
+
+@media screen and (min-width: 460px) {
+  .users-box {
+    width: 70%;
+    margin: auto;
+    margin-top: 6px;
+    /* border: 2px solid red; */
+  }
+  #friend-container .friend-message-container {
+    width: 100%;
+    /* border: 2px solid green; */
+  }
+}
+
+@media screen and (min-width: 720px) {
+  body {
+    width: 720px;
+    margin: auto;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  body {
+    width: 100%;
+    /* margin: auto; */
+  }
+
+  #friend-container .frined-search-type {
+    display: block;
+    /* width: 396px; */
+    width: 300px;
+    position: fixed;
+    margin-top: 5px;
+    /* margin: 0 10px; */
+    /* border: ; */
+    /* border: 2px solid red; */
+  }
+  .friends-heading > form input {
+    background-color: rgb(249, 249, 249);
+    height: 20px;
+    margin-left: 13px;
+    height: 30px;
+    padding-left: 4px;
+    border-radius: 5px;
+    margin-top: -12px;
+    font-size: 18px;
+    width: 162px;
+  }
+  .frined-search-type .friend-user-box .settings-type {
+    background-color: rgb(230, 229, 229);
+    cursor: pointer;
+    margin-top: 2px;
+    padding: 10px;
+    border-radius: 12px;
+    /* border: 2px solid red; */
+  }
+  .frined-search-type .friend-user-box .settings-type:hover {
+    background-color: rgb(184, 184, 184);
+  }
+
+  #friend-list-home {
+    scroll-margin-block-start: 75px;
+    margin-top: 75px;
+  }
+
+  .settings-type .users-name h3 {
+    margin-top: -4px;
+    padding: 4px;
+    color: black;
+  }
+
+  .none-above-1200 {
+    display: none;
+  }
+
+  #friend-container .friend-message-container {
+    /* display: block; */
+    /* width: 300px; */
+    /* border: 2px solid black; */
+    height: 100vh;
+    overflow-y: scroll;
+    width: 75%;
+    margin-left: 300px;
+    border-top: none;
+    /* border-right: 2px solid rgb(184, 184, 184); */
+    border-left: 2px solid rgb(184, 184, 184);
+    /* border: 2px solid red; */
+  }
+
+  .friend-message-container .friends-heading-min-length {
+    display: none;
+  }
+
+  .friend-message-container::-webkit-scrollbar {
+    display: none;
+  }
+  .friends-heading {
+    padding-top: 60px;
+  }
+
+  .user-card-box {
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content; */
+    margin-left: -20px;
+    width: 71vw;
+    /* position: relative; */
+    /* border: 2px solid red; */
+    /* margin-left: -20px; */
+    /* width: 1000px; */
+    /* width: 70%; */
+    /* height: 100%; */
+  }
+  .users-box {
+    /* width: 100%; */
+    width: 195px;
+    /* height: 100%; */
+    /* border: none; */
+    display: block;
+    /* margin: 0; */
+    background-color: rgb(249, 249, 249);
+    margin: 12px 0 10px 20px;
+    padding: 0;
+    padding-bottom: 10px;
+    /* border: 2px solid red; */
+  }
+  .users-box .users-img {
+    /* margin: 0; */
+    width: 195px;
+    height: 180px;
+    margin: auto;
+    /* border: 2px solid green; */
+  }
+  .users-box .users-img img {
+    width: 100%;
+    border-radius: 16px 16px 0 0;
+    min-height: 180px;
+  }
+  .users-box .users-name h3 {
+    padding: 0;
+    /* border: 2px solid red; */
+    padding-top: 8px;
+    width: 160px;
+  }
+  .users-box .users-name .confirm-add-btns-box {
+    /* border: 2px solid red; */
+    /* padding: 0; */
+    /* margin-top: -1px; */
+    width: 180px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  #friend-container .frined-search-type {
+    /* width: 476px; */
+    width: 361px;
+  }
+
+  #friend-container .friend-message-container {
+    margin-left: 361px;
+  }
+  .friends-heading > form input {
+    width: 180px;
+  }
+}

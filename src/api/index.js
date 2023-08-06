@@ -1,16 +1,16 @@
 import { API_URLS, LOCALSTORAGE_TOKEN_KEY } from "../utils";
 
 const customFetch = async (url, { body, ...customConfig }) => {
-  const token = window.localStorage.getItem(LOCALSTORAGE_TOKEN_KEY);
+  // const token = window.localStorage.getItem(LOCALSTORAGE_TOKEN_KEY);
 
   const headers = {
     "content-type": "application/json",
     Accept: "application/json",
   };
 
-  if (token) {
-    headers.Authorization = `Bearer ${token}`;
-  }
+  // if (token) {
+  //   headers.Authorization = `Bearer ${token}`;
+  // }
 
   const config = {
     ...customConfig,
@@ -50,3 +50,10 @@ const customFetch = async (url, { body, ...customConfig }) => {
 //     method: 'GET',
 //   });
 // };
+
+export const login = (email, password) => {
+  return customFetch(API_URLS.login, {
+    method: "POST",
+    body: { email, password },
+  });
+};

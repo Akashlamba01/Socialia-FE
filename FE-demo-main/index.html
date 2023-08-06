@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Real-time Updates: Utilized WebSocket technology (e.g., Socket.io) to provide real-time notifications and updates to users.  -->
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Socialia | Home</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Comme&family=Edu+NSW+ACT+Foundation:wght@500&family=Pacifico&display=swap"
+      rel="stylesheet" />
+
+    <!-- css links/////////// -->
+    <link rel="stylesheet" href="style/_header.css" />
+    <link rel="stylesheet" href="style/index.css" />
+
+    <script
+      src="https://kit.fontawesome.com/8ff5f3e8e1.js"
+      crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    <header>
+      <div class="heading-section">
+        <a href="">
+          <h1 class="heading">Socialia</h1>
+        </a>
+
+        <div>
+          <div onclick="toggleSettingBtn()" id="show">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+          <div class="profile-setting-toggle" id="profile-setting">
+            <div onclick="toggleSettingBtn()">
+              <a> cencel </a>
+            </div>
+            <div>
+              <a href="">profile</a>
+            </div>
+            <div>
+              <a href="">update profile</a>
+            </div>
+            <div>
+              <a href="">settings</a>
+            </div>
+            <div>
+              <a href="">logout</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <nav>
+        <ul>
+          <li>
+            <a href="./index.html"
+              ><i class="fa-solid fa-house activate"></i>
+            </a>
+          </li>
+          <li>
+            <a href="./friends.html"><i class="fa-solid fa-user-group"></i></a>
+          </li>
+          <li class="display-none-icon">
+            <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
+          </li>
+
+          <li class="display-none-icon">
+            <a href="./message.html"><i class="fa-solid fa-message"></i></a>
+          </li>
+
+          <li>
+            <a href="./notification.html"><i class="fa-solid fa-bell"></i></a>
+          </li>
+          <li class="login">
+            <a href="./login.html"><i class="fa-solid fa-user"></i></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="main-container">
+      <!-- friend side section///////////// -->
+
+      <div class="friend-message-container">
+        <div class="friends-heading">
+          <h1>Friends</h1>
+
+          <form action="">
+            <input type="text" placeholder="search..." />
+            <button type="submit">
+              <i class="fa-solid fa-search"></i>
+            </button>
+          </form>
+        </div>
+
+        <!-- user box start -->
+        <div class="friend-user-box">
+          <!-- request heading  -->
+          <div class="request-heading">
+            <h3>Friend requests</h3>
+            <a href="">See All</a>
+          </div>
+
+          <!-- request friend box start-->
+          <div class="users-box">
+            <div class="users-img">
+              <img src="../image//profile/proImg.jpg" alt="" />
+            </div>
+
+            <div class="users-name">
+              <h3>
+                <a href=""> Akash Lamba kumar singh</a>
+              </h3>
+              <div class="confirm-add-btns-box">
+                <a href="">
+                  <div class="confirm-add-btns" id="friend-confirm-btn">
+                    Confirm
+                  </div>
+                </a>
+
+                <a href="">
+                  <div
+                    class="confirm-add-btns"
+                    id="friend-delete-btn"
+                    style="margin-left: 10px">
+                    Remove
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- request friend box end-->
+        </div>
+
+        <div class="friend-user-box">
+          <!-- request heading  -->
+          <div class="request-heading">
+            <h3>People in Socialia</h3>
+            <a href="">See All</a>
+          </div>
+
+          <!-- request user box start-->
+          <div class="users-box">
+            <div class="users-img">
+              <img src="../image//profile/proImg.jpg" alt="" />
+            </div>
+
+            <div class="users-name">
+              <h3>
+                <a href=""> Akash Lamba </a>
+              </h3>
+              <div class="confirm-add-btns-box">
+                <a href="">
+                  <div class="confirm-add-btns" id="friend-confirm-btn">
+                    Add
+                  </div>
+                </a>
+
+                <a href="">
+                  <div
+                    class="confirm-add-btns"
+                    id="friend-delete-btn"
+                    style="margin-left: 10px">
+                    Remove
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- request user box start-->
+        </div>
+      </div>
+
+      <!-- post and timeline section/////////////// -->
+      <div id="post-timeline">
+        <div class="create-post">
+          <div>
+            <a href="">
+              <img src="./image/profile/proImg.jpg" alt="" />
+              <!-- <input type="text" placeholder="" /> -->
+              <div class="input-title">Whats on your mind?</div>
+              <div style="text-align: center">
+                <i class="fa-regular fa-image"></i>
+                <small>Photo</small>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="timeline-post">
+          <div class="post-profile-details">
+            <div class="post-user-profile">
+              <div class="post-profile-img">
+                <img src="./image/profile/proImg.jpg" alt="" />
+              </div>
+
+              <div class="post-profile-name">
+                <h3>
+                  <a href=""> Akash Lamba </a>
+                </h3>
+                <span>23, june 2023</span>
+              </div>
+            </div>
+
+            <div class="post-togle-btn">
+              <!-- <button onclick="togelBtn">
+                  <i class="fa-solid fa-ellipsis"></i>
+                </button> -->
+
+              <button><a href=""> view </a></button>
+              <!-- <a href=""> </a> -->
+              <!-- <input type="text" class="fa-solid fa-ellipsis" /> -->
+            </div>
+          </div>
+
+          <div class="post-content">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
+            laborum eaque vitae minima ut necessitatibus. Eum quo perspiciatis
+            expedita excepturi reiciendis incidunt omnis possimus aperiam,
+            veritatis inventore molestiae rerum, aliquid ipsam ducimus.
+          </div>
+          <div class="post-img">
+            <a href="./post.html">
+              <center>
+                <img src="./image/profile/IMG_20200826_085129.jpg" alt="" />
+              </center>
+            </a>
+          </div>
+          <div class="like-comment">
+            <a href="">
+              <button class="like-comment-box">
+                <i class="fa-solid fa-heart"></i> 10
+              </button>
+            </a>
+
+            <a href="">
+              <button class="like-comment-box">
+                <i class="fa-regular fa-comment"></i> 45
+              </button>
+            </a>
+          </div>
+        </div>
+
+        <!--  -->
+        <!--  -->
+      </div>
+
+      <!-- messages and its list-->
+      <div class="friend-message-container">
+        <div class="friends-heading">
+          <h1>Messages</h1>
+        </div>
+
+        <div id="chat-box">
+          <div id="chat-one">
+            <div id="chat-two"></div>
+          </div>
+        </div>
+
+        <!-- user box start -->
+        <div class="friend-user-box">
+          <!-- request heading  -->
+          <div class="request-heading">
+            <h3>Recent Chats</h3>
+            <a href="">See All</a>
+          </div>
+
+          <!-- request friend box start-->
+          <a href="#">
+            <div class="users-box">
+              <div class="users-img">
+                <img src="../image//profile/proImg.jpg" alt="" />
+              </div>
+
+              <div class="users-name">
+                <h3 class="users-name-message">Akash Lamba kumar singh</h3>
+                <div class="chat-message">
+                  <p>jakljlk djfaioj ldasjkldj fi ejf dmfoiei</p>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <!-- request friend box end-->
+        </div>
+
+        <div class="friend-user-box">
+          <!-- request heading  -->
+          <div class="request-heading">
+            <h3>Groups</h3>
+            <a href="">See All</a>
+          </div>
+
+          <!-- request user box start-->
+          <a href="">
+            <div class="users-box">
+              <div class="users-img">
+                <img src="../image//profile/proImg.jpg" alt="" />
+              </div>
+
+              <div class="users-name">
+                <h3 class="users-name-message">Akash Lamba</h3>
+                <div class="chat-message">
+                  <p>jakljlk djfaioj ldasjkldj fi ejf dmfoiei</p>
+                </div>
+              </div>
+            </div>
+          </a>
+          <!-- request user box start-->
+        </div>
+      </div>
+    </section>
+
+    <script>
+      var x = document.getElementById("chat-box");
+      x.style.display = "none";
+      function toggleSettingBtn() {
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
+      }
+    </script>
+  </body>
+</html>

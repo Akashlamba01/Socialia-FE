@@ -1,12 +1,13 @@
 import React from "react";
 import img from "./img.jpg";
+import { Link } from "react-router-dom";
 
 const Posts = ({ styles }) => {
   return (
     <div className={styles.postTimeline}>
       <div className={styles.createPost}>
         <div>
-          <a href="">
+          <Link to="">
             <div>
               <img src={img} alt="" />
             </div>
@@ -18,7 +19,7 @@ const Posts = ({ styles }) => {
                 <small>Photo</small>
               </div>
             </div>
-          </a>
+          </Link>
         </div>
       </div>
 
@@ -31,7 +32,7 @@ const Posts = ({ styles }) => {
 
             <div className={styles.postProfileName}>
               <h3>
-                <a href=""> Akash Lamba </a>
+                <Link to=""> Akash Lamba </Link>
               </h3>
               <span>23, june 2023</span>
             </div>
@@ -43,9 +44,9 @@ const Posts = ({ styles }) => {
                 </button> --> */}
 
             <button>
-              <a href=""> view </a>
+              <Link to=""> view </Link>
             </button>
-            {/* <!-- <a href=""> </a> -->
+            {/* <!-- <Link to=""> </Link> -->
               <!-- <input type="text" className="fa-solid fa-ellipsis" /> --> */}
           </div>
         </div>
@@ -57,24 +58,24 @@ const Posts = ({ styles }) => {
           veritatis inventore molestiae rerum, aliquid ipsam ducimus.
         </div>
         <div className={styles.postImg}>
-          <a href="./post.html">
+          <Link to="./post.html">
             <center>
               <img src={img} alt="" />
             </center>
-          </a>
+          </Link>
         </div>
         <div className={styles.likeComment}>
-          <a href="">
+          <Link to="">
             <button className={styles.likeCommentBox}>
               <i className="fa-solid fa-heart"></i> 10
             </button>
-          </a>
+          </Link>
 
-          <a href="">
+          <Link to="">
             <button className={styles.likeCommentBox}>
               <i className="fa-regular fa-comment"></i> 45
             </button>
-          </a>
+          </Link>
         </div>
       </div>
     </div>

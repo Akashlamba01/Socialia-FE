@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "../styles/navbar.module.css";
 import useWindowSize from "../utils/useWindowSize";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const size = useWindowSize();
@@ -12,9 +13,9 @@ const Navbar = () => {
   return (
     <header className={styles.header}>
       <div className={styles.headingSection}>
-        <a href="">
+        <Link to="">
           <h1 className={styles.heading}>Socialia</h1>
-        </a>
+        </Link>
 
         <div>
           <div onClick={() => toggleSettingBtn()} className={styles.show}>
@@ -22,19 +23,19 @@ const Navbar = () => {
           </div>
           <div className={styles.profileSettingToggle} id="profile-setting">
             <div onClick={() => toggleSettingBtn()}>
-              <a> cencel </a>
+              <Link> cencel </Link>
             </div>
             <div>
-              <a href="">profile</a>
+              <Link to="">profile</Link>
             </div>
             <div>
-              <a href="">update profile</a>
+              <Link to="">update profile</Link>
             </div>
             <div>
-              <a href="">settings</a>
+              <Link to="">settings</Link>
             </div>
             <div>
-              <a href="">logout</a>
+              <Link to="">logout</Link>
             </div>
           </div>
         </div>
@@ -43,41 +44,41 @@ const Navbar = () => {
       <nav>
         <ul>
           <li>
-            <a href="/" className="activate">
+            <Link to="/" className="activate">
               <i className="fa-solid fa-house "></i>
-            </a>
+            </Link>
           </li>
 
           <li>
-            <a href="./friends">
+            <Link to="./friends">
               <i className="fa-solid fa-user-group"></i>
-            </a>
+            </Link>
           </li>
 
           {size.width < 1200 && (
             <li>
-              <a href="">
+              <Link to="">
                 <i className="fa-solid fa-magnifying-glass"></i>
-              </a>
+              </Link>
             </li>
           )}
           {size.width < 1200 && (
             <li>
-              <a href="./message.html">
+              <Link to="./message.html">
                 <i className="fa-solid fa-message"></i>
-              </a>
+              </Link>
             </li>
           )}
 
           <li>
-            <a href="/notifications">
+            <Link to="/notifications">
               <i className="fa-solid fa-bell"></i>
-            </a>
+            </Link>
           </li>
           <li className="login">
-            <a href="/profile">
+            <Link to="/profile">
               <i className="fa-solid fa-user"></i>
-            </a>
+            </Link>
           </li>
         </ul>
       </nav>

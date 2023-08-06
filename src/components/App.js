@@ -7,14 +7,10 @@ import {
   NotificationsPage,
   ProfilePage,
   LoginPage,
+  SignupPage,
 } from "../pages";
-import {
-  BrowserRouter as Router,
-  Route,
-  useHistory,
-  Switch,
-} from "react-router-dom";
-import { Navbar } from "./index";
+import { Routes, Route, BrowserRouter, useNavigate } from "react-router-dom";
+import { Navbar, Signup } from "./index";
 import Loading from "./Loading";
 
 function App() {
@@ -31,7 +27,7 @@ function App() {
   const [done, setDone] = useState(undefined);
   const [loading, setLoading] = useState(true);
 
-  const history = useHistory();
+  // const history = useNavigate();
 
   useEffect(() => {
     setTimeout(() => {
@@ -43,42 +39,37 @@ function App() {
     return <Loading />;
   }
 
-  // const logedIn = false;
+  const logedIn = false;
   // if (!logedIn) {
-  //   console.log("jjjjjjjjjjjjjjjjjjjjjj");
-  //   history.push("/login");
+  //   // console.log("jjjjjjjjjjjjjjjjjjjjjj");
+  //   history("/login");
   // }
   // history.push("/login");
 
   return (
-    <Router>
-      <Navbar />
-
-      <Switch>
-        <Route exact path="/">
-          <Home />
-        </Route>
-        <Route path="/profile">
-          <ProfilePage />
-        </Route>
-
-        <Route path="/friends">
-          <FriendsPage />
-        </Route>
-        <Route path="/notifications">
-          <NotificationsPage />
-        </Route>
-        <Route path="/messages">
-          <MessagesPage />
-        </Route>
-        <Route path="/login">
-          <LoginPage />
-        </Route>
-
-        {/* <Route path="/signup" element={<Signup />} />
-        <Route path="/profile" element={<Profile />} /> */}
-      </Switch>
-    </Router>
+    <BrowserRouter>
+      {logedIn ? (
+        <>
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/profile" element={<ProfilePage />} />
+            <Route path="/friends" element={<FriendsPage />} />
+            <Route path="/notifications" element={<NotificationsPage />} />
+            <Route path="/messages" element={<MessagesPage />} />
+            {/* <Route path="/login" element={<LoginPage />} /> */}
+            {/* <Route path="/signup" element={<SignupPage />} /> */}
+          </Routes>
+        </>
+      ) : (
+        <>
+          <Routes>
+            <Route path="/login" element={<LoginPage />} />
+            <Route path="/signup" element={<SignupPage />} />
+          </Routes>
+        </>
+      )}
+    </BrowserRouter>
   );
 }
 

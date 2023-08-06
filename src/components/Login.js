@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-// import { Link } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import toastStyle from "../styles/toast.module.css";
+import { login } from "../api";
 
 const Login = ({ styles }) => {
   const [email, setEmail] = useState("");
@@ -61,8 +61,20 @@ const Login = ({ styles }) => {
       });
     }
 
-    // const response = await getUser();
-    // console.log(response);
+    const response = await login(email, password);
+
+    if (response.success) {
+      toast.success("Loged in successfully! ", {
+        position: toast.POSITION.TOP_RIGHT,
+        // className: `${toastStyle.success}`,
+      });
+    } else {
+      toast.error("Soting Wrong! ", {
+        position: toast.POSITION.TOP_RIGHT,
+        // className: `${toastStyle.success}`,
+      });
+    }
+    setLoggingIn(false);
   };
 
   return (

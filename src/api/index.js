@@ -8,6 +8,8 @@ const customFetch = async (url, { body, ...customConfig }) => {
     Accept: "application/json",
   };
 
+  console.log(url);
+
   // if (token) {
   //   headers.Authorization = `Bearer ${token}`;
   // }
@@ -26,11 +28,14 @@ const customFetch = async (url, { body, ...customConfig }) => {
 
   try {
     const response = await fetch(url, config);
+    console.log(response);
+
     const data = await response.json();
+    console.log(data);
 
     if (data.success) {
       return {
-        data: data.data,
+        data: data,
         success: true,
       };
     }
@@ -55,5 +60,11 @@ export const login = (email, password) => {
   return customFetch(API_URLS.login, {
     method: "POST",
     body: { email, password },
+  });
+};
+
+export const getUser = () => {
+  return customFetch(API_URLS.getUser, {
+    method: "GET",
   });
 };

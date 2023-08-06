@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getPosts } from "../api";
+// import { getPosts } from "../api";
 import {
   Home,
   FriendsPage,
@@ -39,7 +39,7 @@ function App() {
     return <Loading />;
   }
 
-  const logedIn = false;
+  // const logedIn = true;
   // if (!logedIn) {
   //   // console.log("jjjjjjjjjjjjjjjjjjjjjj");
   //   history("/login");
@@ -48,27 +48,27 @@ function App() {
 
   return (
     <BrowserRouter>
-      {logedIn ? (
-        <>
-          <Navbar />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/profile" element={<ProfilePage />} />
-            <Route path="/friends" element={<FriendsPage />} />
-            <Route path="/notifications" element={<NotificationsPage />} />
-            <Route path="/messages" element={<MessagesPage />} />
-            {/* <Route path="/login" element={<LoginPage />} /> */}
-            {/* <Route path="/signup" element={<SignupPage />} /> */}
-          </Routes>
-        </>
-      ) : (
-        <>
-          <Routes>
-            <Route path="/login" element={<LoginPage />} />
-            <Route path="/signup" element={<SignupPage />} />
-          </Routes>
-        </>
-      )}
+      {/* {logedIn ? ( */}
+      <>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/profile" element={<ProfilePage />} />
+          <Route path="/friends" element={<FriendsPage />} />
+          <Route path="/notifications" element={<NotificationsPage />} />
+          <Route path="/messages" element={<MessagesPage />} />
+          {/* <Route path="/login" element={<LoginPage />} /> */}
+          {/* <Route path="/signup" element={<SignupPage />} /> */}
+        </Routes>
+      </>
+      {/* ) : ( */}
+      <>
+        <Routes>
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/signup" element={<SignupPage />} />
+        </Routes>
+      </>
+      {/* )} */}
     </BrowserRouter>
   );
 }

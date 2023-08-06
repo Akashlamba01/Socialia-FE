@@ -1,9 +1,10 @@
-const API_ROOT = "http://localhost:8000/api";
+const API_ROOT = "http://localhost:8000";
 
 // doc url - https://www.notion.so/aakashcn/Codeial-API-docs-3a4d0b5a42c54f0a94d951a42aabc13f
 export const API_URLS = {
-  login: () => `${API_ROOT}/users/create-session`,
-  getUser: () => `${API_ROOT}/admin/user-list`,
+  login: `${API_ROOT}/users/create-session`,
+  login: `${API_ROOT}/users/sign-in`,
+  getUser: `${API_ROOT}`,
   signup: () => `${API_ROOT}/users/sign-up`,
   // posts: (page, limit) => `${API_ROOT}/posts?page=${page}&limit=${limit}`,
   // createPost: (content) => `${API_ROOT}/post/create`,

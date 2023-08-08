@@ -44,6 +44,16 @@ input {
   font-size: 16px;
 }
 
+.hideAndShowPass {
+  cursor: pointer;
+  /* border: 2px solid red; */
+  float: right;
+  margin-top: -45px;
+  position: relative;
+  font-size: 20px;
+  margin-right: 10px;
+}
+
 input[type="date"] {
   margin-top: 9px;
 }

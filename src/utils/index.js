@@ -4,7 +4,8 @@ export const setItemInLocalStorage = (key, value) => {
   if (!key || !value) {
     return console.error("can not store in local storage!");
   }
-  const sotreValue = typeof value === "string" ? JSON.stringify(value) : value;
+  // console.log(typeof value);
+  const sotreValue = typeof value === String ? JSON.stringify(value) : value;
   return localStorage.setItem(key, sotreValue);
 };
 

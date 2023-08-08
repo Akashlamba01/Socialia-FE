@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+// import "react-toastify/dist/ReactToastify.css";
 import toastStyle from "../styles/toast.module.css";
 import { useAuth, useProvideAuth } from "../hooks";
 
@@ -21,6 +21,10 @@ const Login = ({ styles }) => {
       position: toast.POSITION.TOP_RIGHT,
       className: `${toastStyle.success}`,
     });
+  };
+
+  const goToSignup = () => {
+    history("/signup");
   };
 
   const handleSubmit = async (e) => {
@@ -97,10 +101,10 @@ const Login = ({ styles }) => {
         <p>oR</p>
         <br />
 
-        <Link onClick={() => showToastMessage()}>
+        <div onClick={() => goToSignup()}>
           <button>Create a new account !</button>
-          <ToastContainer />
-        </Link>
+          {/* <ToastContainer /> */}
+        </div>
 
         <Link to="#">
           <button className={styles.googleLoginBtn}>

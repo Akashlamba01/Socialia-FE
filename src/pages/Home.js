@@ -1,15 +1,17 @@
 import React, { useEffect } from "react";
 import styles from "../styles/index.module.css";
-import { Friends, Posts, Messages } from "../components/index";
+import { Friends, Posts, Messages, Loading } from "../components/index";
 // import Navbar from "../components/Navbar";
 
 import useWindowSize from "../utils/useWindowSize";
 import { getItemInLocalStorage } from "../utils";
 import { useAuth } from "../hooks";
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 export const Home = () => {
   const size = useWindowSize();
+  const [loading, setLoading] = useState(true);
   // getItemInLocalStorage("token")
   // const auth = useAuth();
   const history = useNavigate();
@@ -19,7 +21,13 @@ export const Home = () => {
     if (!token) {
       history("/login");
     }
+
+    setLoading(false);
   }, []);
+
+  if (loading) {
+    return <Loading />;
+  }
 
   return (
     <div className={styles.mainContainer}>

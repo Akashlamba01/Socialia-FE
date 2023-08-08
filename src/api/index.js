@@ -75,3 +75,10 @@ export const logout = () => {
     method: "GET",
   });
 };
+
+export const signup = (email, password, confirmPassword, fullName, city) => {
+  return customFetch(API_URLS.signup, {
+    method: "POST",
+    body: { email, password, confirmPassword, fullName, city },
+  });
+};

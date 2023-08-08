@@ -4,19 +4,22 @@ import { Friends, Posts, Messages } from "../components/index";
 // import Navbar from "../components/Navbar";
 
 import useWindowSize from "../utils/useWindowSize";
-import { getUser } from "../api";
+import { getItemInLocalStorage } from "../utils";
+import { useAuth } from "../hooks";
+import { useNavigate } from "react-router-dom";
 
 export const Home = () => {
   const size = useWindowSize();
+  // getItemInLocalStorage("token")
+  // const auth = useAuth();
+  const history = useNavigate();
 
-  // useEffect(() => {
-  //   const fetchUser = async () => {
-  //     const response = await getUser();
-  //     console.log(response);
-  //   };
-
-  //   fetchUser();
-  // }, []);
+  useEffect(() => {
+    const token = getItemInLocalStorage("access_token");
+    if (!token) {
+      history("/login");
+    }
+  }, []);
 
   return (
     <div className={styles.mainContainer}>

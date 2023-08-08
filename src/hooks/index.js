@@ -1,12 +1,13 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../providers/AuthProvider";
-import { login as userLogin } from "../api";
+import { login as userLogin, logout as userLogout } from "../api";
 import {
   getItemInLocalStorage,
   removeItemInLocalStorage,
   setItemInLocalStorage,
 } from "../utils";
 import jwt from "jwt-decode";
+import { useNavigate } from "react-router-dom";
 
 export const useAuth = () => {
   return useContext(AuthContext);
@@ -21,8 +22,10 @@ export const useProvideAuth = () => {
 
     if (userToken) {
       const user = jwt(userToken);
+      console.log(user);
 
       setUser(user);
+    } else {
     }
 
     setLoading(false);
@@ -33,7 +36,7 @@ export const useProvideAuth = () => {
 
     if (response.success) {
       // console.log(response);
-      setUser(response.data.data.firstName + " " + response.data.data.lastName);
+      setUser(response.data.data.fullName);
       setItemInLocalStorage(
         "access_token",
         response.data.data.accessToken ? response.data.data.accessToken : ""
@@ -43,15 +46,32 @@ export const useProvideAuth = () => {
         success: true,
       };
     } else {
+      setLoading(false);
       return {
         success: false,
         message: response.message,
       };
     }
   };
-  const logout = () => {
-    setUser(null);
-    removeItemInLocalStorage("access_token");
+  const logout = async () => {
+    setLoading(true);
+    const response = await userLogout();
+
+    if (response.success) {
+      console.log(response);
+      setUser(null);
+      removeItemInLocalStorage("access_token");
+      setLoading(false);
+      return {
+        success: true,
+      };
+    } else {
+      setLoading(false);
+      return {
+        success: false,
+        message: response.message,
+      };
+    }
   };
 
   return {

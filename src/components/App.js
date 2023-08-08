@@ -9,70 +9,42 @@ import {
   LoginPage,
   SignupPage,
 } from "../pages";
-import { Routes, Route, BrowserRouter, useNavigate } from "react-router-dom";
-import { Navbar, Signup } from "./index";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
+import { Navbar } from "./index";
 import Loading from "./Loading";
 import { useAuth } from "../hooks";
+import { getItemInLocalStorage } from "../utils";
 
 function App() {
-  // useEffect(() => {
-  //   const fetchPosts = async () => {
-  //     const response = await getPosts();
-  //     console.log('response', response);
-  //   };
+  const auth = useAuth();
 
-  //   fetchPosts();
-  // }, []);
-
-  const [data, setData] = useState([]);
-  const [done, setDone] = useState(undefined);
-  const [loading, setLoading] = useState(true);
+  if (auth.loading) {
+    return <Loading />;
+  }
+  const logedIn = getItemInLocalStorage("access_token");
 
   // const history = useNavigate();
 
-  useEffect(() => {
-    setTimeout(() => {
-      setLoading(false);
-    }, 2000);
-  }, []);
-
-  // const auth = useAuth();
-  // console.log(auth);
-
-  if (loading) {
-    return <Loading />;
-  }
-
-  // const logedIn = true;
-  // if (!logedIn) {
-  //   // console.log("jjjjjjjjjjjjjjjjjjjjjj");
-  //   history("/login");
-  // }
-  // history.push("/login");
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setLoading(false);
+  //   }, 2000);
+  // }, []);
 
   return (
     <BrowserRouter>
-      {/* {logedIn ? ( */}
-      <>
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/profile" element={<ProfilePage />} />
-          <Route path="/friends" element={<FriendsPage />} />
-          <Route path="/notifications" element={<NotificationsPage />} />
-          <Route path="/messages" element={<MessagesPage />} />
-          {/* <Route path="/login" element={<LoginPage />} /> */}
-          {/* <Route path="/signup" element={<SignupPage />} /> */}
-        </Routes>
-      </>
-      {/* ) : ( */}
-      <>
-        <Routes>
-          <Route path="/login" element={<LoginPage />} />
-          <Route path="/signup" element={<SignupPage />} />
-        </Routes>
-      </>
-      {/* )} */}
+      {logedIn ? <Navbar /> : ""}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/profile" element={<ProfilePage />} />
+        <Route path="/friends" element={<FriendsPage />} />
+        <Route path="/notifications" element={<NotificationsPage />} />
+        <Route path="/messages" element={<MessagesPage />} />
+        {/* <Route path="/login" element={<LoginPage />} /> */}
+        {/* <Route path="/signup" element={<SignupPage />} /> */}
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/signup" element={<SignupPage />} />
+      </Routes>
     </BrowserRouter>
   );
 }

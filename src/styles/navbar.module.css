@@ -37,13 +37,13 @@ header {
   opacity: 0.9;
 }
 .profileSettingToggle {
-  display: none;
-  cursor: pointer;
+  /* display: none; */
   /* margin-left: -100px; */
+  cursor: pointer;
   border: 2px solid gray;
-  margin-left: -90px;
+  margin-left: -100px;
   width: 130px;
-  margin-top: -28px;
+  margin-top: -40px;
   /* position: absolute; */
   position: fixed;
   background-color: rgb(228, 228, 228);
@@ -54,13 +54,12 @@ header {
   /* height: 24px; */
   padding: 4px;
   padding-left: 10px;
-}
-.profileSettingToggle div a {
-  color: black;
   font-weight: bold;
 }
+
 .profileSettingToggle div:hover {
   background-color: rgb(211, 211, 211);
+  text-decoration: underline;
 }
 .header nav ul {
   display: flex;
@@ -92,7 +91,7 @@ header nav ul li i {
 /* media for 720px////////////////////////////////////////////////////////////// */
 @media screen and (min-width: 460px) {
   .profileSettingToggle {
-    margin-left: -85px;
+    /* margin-left: -1px; */
   }
 }
 
@@ -103,7 +102,7 @@ header nav ul li i {
     margin: auto;
   }
   .profileSettingToggle {
-    margin-left: -70px;
+    margin-left: -80px;
   }
 }
 
@@ -138,13 +137,13 @@ header nav ul li i {
     margin-right: 20px;
   }
   .profileSettingToggle {
-    display: none;
+    /* display: none; */
     cursor: pointer;
     /* margin-left: -100px; */
     border: 2px solid gray;
     margin-left: -90px;
     width: 140px;
-    margin-top: -40px;
+    margin-top: -50px;
     /* position: absolute; */
     /* position: absolute; */
     background-color: rgb(228, 228, 228);

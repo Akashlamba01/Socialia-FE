@@ -1,7 +1,7 @@
 import { API_URLS, LOCALSTORAGE_TOKEN_KEY, getFormBody } from "../utils";
 
 const customFetch = async (url, { body, ...customConfig }) => {
-  // const token = window.localStorage.getItem(LOCALSTORAGE_TOKEN_KEY);
+  const token = window.localStorage.getItem("access_token");
 
   const headers = {
     "content-type": "application/x-www-form-urlencoded",
@@ -10,9 +10,9 @@ const customFetch = async (url, { body, ...customConfig }) => {
 
   console.log(url);
 
-  // if (token) {
-  //   headers.Authorization = `Bearer ${token}`;
-  // }
+  if (token) {
+    headers.Authorization = `Bearer ${token}`;
+  }
 
   const config = {
     ...customConfig,
@@ -66,6 +66,12 @@ export const login = (email, password) => {
 
 export const getUser = () => {
   return customFetch(API_URLS.getUser, {
+    method: "GET",
+  });
+};
+
+export const logout = () => {
+  return customFetch(API_URLS.logout, {
     method: "GET",
   });
 };

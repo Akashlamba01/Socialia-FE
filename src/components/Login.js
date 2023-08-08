@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import toastStyle from "../styles/toast.module.css";
@@ -9,6 +9,8 @@ const Login = ({ styles }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loggingIn, setLoggingIn] = useState(false);
+
+  const history = useNavigate();
 
   const auth = useAuth();
   console.log(auth);
@@ -40,6 +42,7 @@ const Login = ({ styles }) => {
         position: toast.POSITION.TOP_RIGHT,
         // className: `${toastStyle.success}`,
       });
+      history("/");
     } else {
       toast.error("Soting Wrong! ", {
         position: toast.POSITION.TOP_RIGHT,

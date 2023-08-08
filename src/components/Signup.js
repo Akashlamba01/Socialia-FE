@@ -13,9 +13,13 @@ const Signup = ({ styles }) => {
           <input type="text" placeholder="Name" required />
           <input type="email" placeholder="Email" required />
           {/* <!-- <input type="text" placeholder="Phone" required /> --> */}
-          <input type="date" id="birthdate" placeholder="date" required />
+          <input type="text" id="birthdate" placeholder="city" required />
           <input type="password" placeholder="Password" required />
-          <input type="c_password" placeholder="Confirm Password" required />
+          <input
+            type="confirmPassword"
+            placeholder="Confirm Password"
+            required
+          />
           <button type="submit" id="submitBtn">
             Sign Up
           </button>

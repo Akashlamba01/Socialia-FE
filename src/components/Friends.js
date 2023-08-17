@@ -6,8 +6,8 @@ import { Link } from "react-router-dom";
 const Friends = ({ styles }) => {
   return (
     <div className={styles.friendUserBoxContainer}>
-      <div className={styles.friendsHeading}>
-        <h1>Friends</h1>
+      <div className={styles.friendHeading}>
+        <h1 style={{ fontSize: "24px" }}>Friends</h1>
 
         {/* <img src="img.jpg" /> */}
 

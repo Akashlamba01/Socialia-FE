@@ -82,3 +82,30 @@ export const signup = (email, password, confirmPassword, fullName, city) => {
     body: { email, password, confirmPassword, fullName, city },
   });
 };
+
+export const sendOtp = (email) => {
+  return customFetch(API_URLS.sendOtp, {
+    body: { email },
+  });
+};
+
+export const otpVerify = (email, OTP) => {
+  return customFetch(API_URLS.otpVerify, {
+    method: "POST",
+    body: { email, OTP },
+  });
+};
+
+export const forgetPassword = (email, password, confirmPassword) => {
+  return customFetch(API_URLS.forgetPassword, {
+    method: "POST",
+    body: { email, confirmPassword, password },
+  });
+};
+
+export const sendMsg = (msg, phone) => {
+  return customFetch(API_URLS.sendMsg, {
+    method: "POST",
+    body: { msg, phone },
+  });
+};

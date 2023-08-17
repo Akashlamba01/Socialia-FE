@@ -1,0 +1,386 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+  /* top: 0; */
+  /* top: 60px; */
+}
+
+.friendContainer {
+  width: 100%;
+}
+
+/* friend search type///////////////////////////////////////////////////// */
+.frinedSearchType {
+  display: none;
+}
+
+/* main continer message start//////////////////////////////////// */
+.friendMessageContainer {
+  display: block;
+  width: 100%;
+  border-top: 1px solid rgb(156, 156, 156);
+}
+.friendsHeadingMinLength {
+  /* border: 2px solid green; */
+  margin: auto;
+  /* border-bottom: 1px solid rgb(156, 156, 156); */
+  padding: 0 5%;
+}
+.friendsHeadingMinLength h1 {
+  margin-bottom: 5px;
+}
+.friendsHeadingMinLength > small {
+  /* margin: 0 5px 5px; */
+  margin-top: 5px;
+  border-radius: 10px;
+  background-color: rgb(230, 229, 229);
+  /* padding: 1px 3px; */
+  margin-right: 4px;
+  padding: 3px 8px;
+}
+
+.friendsHeadingMinLength > small a {
+  color: black;
+}
+
+.friendsHeadingMinLength > div {
+  display: flex;
+  /* justify-content: space-between; */
+  flex-wrap: wrap;
+}
+.friendsHeadingMinLength > div > a {
+  border: 1px solid gray;
+  padding: 2px 8px;
+  background-color: rgb(230, 229, 229);
+  border-radius: 16px;
+  margin-right: 4px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+.friendHeading {
+  display: flex;
+  /* width: 90%; */
+  margin: 10px auto 0;
+  justify-content: space-between;
+  padding: 0 5%;
+  padding-bottom: 6px;
+  /* font-family: Calibri */
+  font-weight: bold;
+  border-bottom: 1px solid rgb(184, 184, 184);
+  /* border: 
+  2px solid red; */
+}
+
+.friendHeading > form {
+  margin-top: 2px;
+  /* margin-left: 10px; */
+  /* border: 2px solid red; */
+  margin-top: -24px;
+  width: 200px;
+}
+
+.friendHeading > form button {
+  margin-left: -50px;
+  color: black;
+  background-color: transparent;
+  border: none;
+  /* border: 2px solid green; */
+  height: 24px;
+  width: 10px;
+  /* font-size: 20px; */
+  height: 40px;
+}
+.friendHeading > form button i {
+  padding: 0;
+  font-size: 20px;
+}
+.friendUserBox {
+  /* border: 1px solid rgb(146, 146, 146); */
+  /* margin-top: 4px; */
+  /* width: 90%; */
+  margin: auto;
+  padding: 10px 5%;
+
+  /* padding-bottom: 10px; */
+}
+/* .friendUserBox-innerbox {
+} */
+.requestHeading {
+  display: flex;
+  justify-content: space-between;
+}
+.requestHeading a {
+  color: blue;
+  text-decoration: underline;
+}
+.usersBox {
+  margin-top: 6px;
+  padding: 10px;
+  /* border: 2px solid green; */
+  /* border-top: 1px solid rgb(146, 146, 146); */
+  /* border-bottom: 2px solid rgb(146, 146, 146); */
+  display: flex;
+  border-radius: 16px;
+  transition: 500ms;
+  border: 1px solid rgb(184, 184, 184);
+}
+
+.usersBox:hover {
+  background-color: rgba(249, 249, 249);
+  box-shadow: 0px 0px 0px 1px rgba(119, 119, 119, 0.57);
+  /* border: 1px solid rgb(249, 249, 249); */
+}
+.usersImg {
+  width: 70px;
+  height: 70px;
+  /* border: 2px solid green; */
+}
+.usersImg img {
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+}
+.usersBox .usersName {
+  /* border: 2px solid red; */
+  /* padding: 10px 0; */
+  /* padding-left: 8px; */
+  margin-left: 10px;
+  width: 200px;
+}
+
+.usersName h3 {
+  /* border: 2px solid yellow; */
+  padding-top: 4px;
+  overflow: hidden;
+  height: 20px;
+  /* height: 20px; */
+}
+.usersNameMessage {
+  padding-top: 10px;
+  color: black;
+}
+.usersName h3 a {
+  color: black;
+}
+/* //////////////////////////////////////////// */
+.usersName .chatMessage {
+  /* border: 2px solid blue; */
+  width: 150px;
+  height: 18px;
+  overflow: hidden;
+  color: rgb(88, 88, 88);
+}
+.usersName .confirmAddBtnsBox {
+  display: flex;
+  /* border: 2px solid yellow; */
+  margin-top: 4px;
+  /* justify-content: space-between; */
+}
+
+.confirmAddBtnsBox .confirmAddBtns {
+  /* border: 2px solid rgb(34, 0, 255); */
+  margin-right: 5px;
+  /* width: 100%; */
+  width: 80px;
+  padding: 5px 0;
+  margin-top: 6px;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.confirmAddBtnsBox .friend-confirm-btn {
+  background-color: rgb(117 18 58);
+  color: white;
+}
+.confirmAddBtnsBox .friendOpenProfileBtn {
+  width: 175px;
+}
+.confirmAddBtnsBox #friend-delete-btn {
+  color: white;
+  background-color: rgb(156, 156, 156);
+}
+
+.confirmAddBtns:hover {
+  text-decoration: underline;
+  opacity: 0.8;
+}
+
+@media screen and (min-width: 460px) {
+  .usersBox {
+    width: 70%;
+    margin: auto;
+    margin-top: 6px;
+    /* border: 2px solid red; */
+  }
+  .friendContainer .friendMessageContainer {
+    width: 100%;
+    /* border: 2px solid green; */
+  }
+}
+
+@media screen and (min-width: 720px) {
+  body {
+    width: 720px;
+    margin: auto;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  body {
+    width: 100%;
+    /* margin: auto; */
+  }
+
+  .friendContainer .frinedSearchType {
+    display: block;
+    /* width: 396px; */
+    width: 300px;
+    position: fixed;
+    margin-top: 5px;
+    /* margin: 0 10px; */
+    /* border: ; */
+    /* border: 2px solid red; */
+  }
+  .friendHeading > form input {
+    background-color: rgb(249, 249, 249);
+    height: 20px;
+    margin-left: 13px;
+    height: 30px;
+    padding-left: 4px;
+    border-radius: 5px;
+    margin-top: -12px;
+    font-size: 18px;
+    width: 162px;
+  }
+  .frinedSearchType .friendUserBox .settingsType {
+    background-color: rgb(230, 229, 229);
+    cursor: pointer;
+    margin-top: 2px;
+    padding: 10px;
+    border-radius: 12px;
+    /* border: 2px solid red; */
+  }
+  .frinedSearchType .friendUserBox .settingsType:hover {
+    background-color: rgb(184, 184, 184);
+  }
+
+  #friend-list-home {
+    scroll-margin-block-start: 75px;
+    margin-top: 75px;
+  }
+
+  .settingsType .usersName h3 {
+    margin-top: -4px;
+    padding: 4px;
+    color: black;
+  }
+
+  .noneAbove1200 {
+    display: none;
+  }
+
+  .friendContainer .friendMessageContainer {
+    /* display: block; */
+    /* width: 300px; */
+    /* border: 2px solid black; */
+    height: 100vh;
+    padding-top: 70px;
+    overflow-y: scroll;
+    width: 75%;
+    margin-left: 300px;
+    border-top: none;
+    /* border-right: 2px solid rgb(184, 184, 184); */
+    border-left: 2px solid rgb(184, 184, 184);
+    /* border: 2px solid red; */
+  }
+
+  .friendMessageContainer .friendsHeadingMinLength {
+    display: none;
+  }
+
+  .friendMessageContainer::-webkit-scrollbar {
+    display: none;
+  }
+  .friendHeading {
+    padding-top: 60px;
+  }
+
+  .userCardBox {
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content; */
+    margin-left: -20px;
+    width: 71vw;
+    /* position: relative; */
+    /* border: 2px solid red; */
+    /* margin-left: -20px; */
+    /* width: 1000px; */
+    /* width: 70%; */
+    /* height: 100%; */
+  }
+  .usersBox {
+    /* width: 100%; */
+    width: 195px;
+    /* height: 100%; */
+    /* border: none; */
+    display: block;
+    /* margin: 0; */
+    background-color: rgb(249, 249, 249);
+    margin: 12px 0 10px 20px;
+    padding: 0;
+    padding-bottom: 10px;
+    /* border: 2px solid red; */
+  }
+  .usersBox .usersImg {
+    /* margin: 0; */
+    width: 193px;
+    height: 180px;
+    margin: auto;
+    /* border: 2px solid green; */
+  }
+  .usersBox .usersImg img {
+    width: 100%;
+    border-radius: 16px 16px 0 0;
+    min-height: 180px;
+  }
+
+  .usersName {
+    /* border: 2px solid red; */
+  }
+
+  .usersBox .usersName h3 {
+    padding: 0;
+    /* border: 2px solid red; */
+    padding-top: 8px;
+    width: 160px;
+    height: 30px;
+  }
+  .usersBox .usersName .confirmAddBtnsBox {
+    /* border: 2px solid red; */
+    /* padding: 0; */
+    /* margin-top: -1px; */
+    width: 180px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .friendContainer .frinedSearchType {
+    /* width: 476px; */
+    width: 361px;
+  }
+
+  .friendContainer .friendMessageContainer {
+    margin-left: 361px;
+  }
+  .friendHeading > form input {
+    width: 180px;
+  }
+}

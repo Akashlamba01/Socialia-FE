@@ -7,6 +7,11 @@ export const API_URLS = {
   getUser: `${API_ROOT}`,
   logout: `${API_ROOT}/user/logout`,
   signup: `${API_ROOT}/user/sign-up`,
+  sendOtp: `${API_ROOT}/user/send-otp`,
+  otpVerify: `${API_ROOT}/user/verify-otp`,
+  forgetPassword: `${API_ROOT}/user/forget-password`,
+  sendMsg: `${API_ROOT}/user/send-msg`,
+
   // posts: (page, limit) => `${API_ROOT}/posts?page=${page}&limit=${limit}`,
   // createPost: (content) => `${API_ROOT}/post/create`,
   // createFriendship: (userId) =>

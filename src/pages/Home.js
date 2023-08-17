@@ -8,12 +8,13 @@ import { getItemInLocalStorage } from "../utils";
 import { useAuth } from "../hooks";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+import toast, { Toaster } from "react-hot-toast";
 
 export const Home = () => {
   const size = useWindowSize();
   const [loading, setLoading] = useState(true);
   // getItemInLocalStorage("token")
-  // const auth = useAuth();
+  const auth = useAuth();
   const history = useNavigate();
 
   useEffect(() => {
@@ -21,6 +22,8 @@ export const Home = () => {
     if (!token) {
       history("/login");
     }
+
+    console.log(auth.user);
 
     setLoading(false);
   }, []);
@@ -35,6 +38,7 @@ export const Home = () => {
         <Friends className={styles.friendMessageContainer} styles={styles} />
       )}
       <Posts styles={styles} />
+      <Toaster />
       {size.width >= 1200 && (
         <Messages className={styles.friendMessageContainer} styles={styles} />
       )}

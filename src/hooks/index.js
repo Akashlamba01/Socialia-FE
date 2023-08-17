@@ -23,6 +23,7 @@ export const useProvideAuth = () => {
     if (userToken) {
       const user = jwt(userToken);
       console.log(user);
+      // user.accessToken = userToken;
 
       setUser(user);
     } else {
@@ -53,6 +54,7 @@ export const useProvideAuth = () => {
       };
     }
   };
+
   const logout = async () => {
     setLoading(true);
     const response = await userLogout();

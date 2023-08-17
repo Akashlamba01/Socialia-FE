@@ -6,5 +6,22 @@ import Messages from "./Messages";
 import Loading from "./Loading";
 import Login from "./Login";
 import Signup from "./Signup";
+import OTPverify from "./OTPverify";
+import Profile from "./Profile";
+import ForgetPassword from "./ForgetPassword";
+import FriendsSeparate from "./FriendsSeparate";
 
-export { App, Navbar, Friends, Posts, Messages, Loading, Login, Signup };
+export {
+  App,
+  Navbar,
+  Friends,
+  Posts,
+  Messages,
+  Loading,
+  Login,
+  Signup,
+  OTPverify,
+  ForgetPassword,
+  Profile,
+  FriendsSeparate,
+};

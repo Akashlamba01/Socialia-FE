@@ -8,12 +8,14 @@ import {
   ProfilePage,
   LoginPage,
   SignupPage,
+  ForgetPasswordPage,
 } from "../pages";
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import { Navbar } from "./index";
 import Loading from "./Loading";
 import { useAuth } from "../hooks";
 import { getItemInLocalStorage } from "../utils";
+import OTPverify from "./OTPverify";
 
 function App() {
   const auth = useAuth();
@@ -34,16 +36,20 @@ function App() {
   return (
     <BrowserRouter>
       {logedIn ? <Navbar /> : ""}
+      {/* <Navbar /> */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/profile" element={<ProfilePage />} />
         <Route path="/friends" element={<FriendsPage />} />
         <Route path="/notifications" element={<NotificationsPage />} />
         <Route path="/messages" element={<MessagesPage />} />
+        <Route path="/profile" element={<ProfilePage />} />
         {/* <Route path="/login" element={<LoginPage />} /> */}
         {/* <Route path="/signup" element={<SignupPage />} /> */}
+        <Route path="/otp-verify" element={<OTPverify />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/signup" element={<SignupPage />} />
+        <Route path="/forget-password" element={<ForgetPasswordPage />} />
       </Routes>
     </BrowserRouter>
   );

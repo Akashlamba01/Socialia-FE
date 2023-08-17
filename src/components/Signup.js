@@ -2,8 +2,11 @@ import { type } from "@testing-library/user-event/dist/type";
 import React from "react";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { signup } from "../api";
 import { useAuth } from "../hooks";
+import { signup } from "../api";
+
+import toast, { Toaster } from "react-hot-toast";
+import { setItemInLocalStorage } from "../utils";
 
 const Signup = ({ styles }) => {
   const [email, setEmail] = useState("");
@@ -30,12 +33,12 @@ const Signup = ({ styles }) => {
 
     setSigningUp(true);
 
-    // if (!email || !password || !confirmPassword || !city || !fullName) {
-    //   toast.error("Soting Wrong! ", {
-    //     position: toast.POSITION.TOP_RIGHT,
-    //     // className: `${toastStyle.success}`,
-    //   });
-    // }
+    if (!email || !password || !confirmPassword || !city || !fullName) {
+      toast.error("All Fields are Required!", {
+        duration: 4000,
+        position: "top-right",
+      });
+    }
 
     // const userObj = [email, password, confirmPassword, city, fullName];
 
@@ -50,10 +53,18 @@ const Signup = ({ styles }) => {
     );
 
     if (response.success) {
-      // toast
-      history("/");
+      setItemInLocalStorage("userEmail", email);
+      // toast.success("User Registerd in successfully!", {
+      //   duration: 4000,
+      //   position: "top-right",
+      // });
+      history("/otp-verify");
     } else {
-      history("/login");
+      console.log(response);
+      toast.error(response.message, {
+        duration: 4000,
+        position: "top-right",
+      });
     }
 
     setSigningUp(false);
@@ -67,18 +78,19 @@ const Signup = ({ styles }) => {
       </div>
 
       <div className={styles.loginSection}>
+        <h3 style={{ color: "gray", marginBottom: "8px" }}>Sign up</h3>
         <form onSubmit={handleSubmit}>
           <input
             type="text"
             onChange={(e) => setFullName(e.target.value)}
             placeholder="Name"
-            required
+            // required
           />
           <input
             type="email"
             onChange={(e) => setEmail(e.target.value)}
             placeholder="Email"
-            required
+            // required
           />
           {/* <!-- <input type="text" placeholder="Phone" required /> --> */}
           <input
@@ -86,19 +98,16 @@ const Signup = ({ styles }) => {
             onChange={(e) => setCity(e.target.value)}
             id="birthdate"
             placeholder="city"
-            required
+            // required
           />
-
           <div>
-            {}
             <input
               type={togel ? "text" : "password"}
               onChange={(e) => setPassword(e.target.value)}
-              placeholder="Password"
-              required
+              placeholder="New Password"
+              // value={password}
+              // required
             />
-            {/* <div className={styles.hideAndShowPass}>
-            </div> */}
             <small
               onClick={() => handleTogel()}
               className={styles.hideAndShowPass}>
@@ -113,14 +122,20 @@ const Signup = ({ styles }) => {
             type={togel ? "text" : "password"}
             placeholder="Confirm Password"
             onChange={(e) => setConfirmPassword(e.target.value)}
-            required
+            // required
           />
           <button type="submit" disabled={signingUp}>
-            {signingUp ? "Signing up..." : "Sign Up"}
+            Sign up!
+            <Toaster />
           </button>
         </form>
+        <br />
+        <p>
+          <Link to="/forget-password">Forgotten Password?</Link>
+        </p>
 
         <br />
+
         <hr />
         <br />
         <p>oR</p>

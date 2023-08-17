@@ -10,6 +10,7 @@ import OTPverify from "./OTPverify";
 import Profile from "./Profile";
 import ForgetPassword from "./ForgetPassword";
 import FriendsSeparate from "./FriendsSeparate";
+import Notification from "./Notification";
 
 export {
   App,
@@ -24,4 +25,5 @@ export {
   ForgetPassword,
   Profile,
   FriendsSeparate,
+  Notification,
 };

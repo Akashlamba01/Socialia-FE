@@ -4,9 +4,11 @@ import { Link } from "react-router-dom";
 
 const Messages = ({ styles }) => {
   return (
-    <div className={styles.friendUserBoxContainer}>
-      <div className={styles.friendsHeading}>
-        <h1>Messages</h1>
+    <div
+      className={styles.friendUserBoxContainer}
+      style={{ borderLeft: "2px solid rgb(184, 184, 184)" }}>
+      <div className={styles.friendHeading}>
+        <h2>Messages</h2>
       </div>
 
       {/* <div className={styles.chatBox}>

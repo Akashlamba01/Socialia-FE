@@ -5,9 +5,11 @@ import { Link } from "react-router-dom";
 
 const Friends = ({ styles }) => {
   return (
-    <div className={styles.friendUserBoxContainer}>
+    <div
+      className={styles.friendUserBoxContainer}
+      style={{ borderRight: "2px solid rgb(184, 184, 184)" }}>
       <div className={styles.friendHeading}>
-        <h1 style={{ fontSize: "24px" }}>Friends</h1>
+        <h2>Friends</h2>
 
         {/* <img src="img.jpg" /> */}
 
@@ -28,6 +30,240 @@ const Friends = ({ styles }) => {
         </div>
 
         {/* <!-- request friend box start--> */}
+        <div className={styles.usersBox}>
+          <div className={styles.usersImg}>
+            <img src={img} alt="profile" />
+          </div>
+
+          <div className={styles.usersName}>
+            <h3>
+              <Link to=""> Akash Lamba kumar singh</Link>
+            </h3>
+            <div className={styles.confirmAddBtnsBox}>
+              <Link to="">
+                <div
+                  className={styles.confirmAddBtns}
+                  style={{
+                    backgroundColor: "rgb(117 18 58)",
+                    color: "white",
+                  }}
+                  id="friend-confirm-btn">
+                  {/* styles.colorEdRed */}
+                  Confirm
+                </div>
+              </Link>
+
+              <Link to="">
+                <div
+                  className={styles.confirmAddBtns}
+                  id="friend-delete-btn"
+                  style={{
+                    marginLeft: "10px",
+                    backgroundColor: "rgb(156, 156, 156)",
+                    color: "white",
+                  }}>
+                  Remove
+                </div>
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        <div className={styles.usersBox}>
+          <div className={styles.usersImg}>
+            <img src={img} alt="profile" />
+          </div>
+
+          <div className={styles.usersName}>
+            <h3>
+              <Link to=""> Akash Lamba kumar singh</Link>
+            </h3>
+            <div className={styles.confirmAddBtnsBox}>
+              <Link to="">
+                <div
+                  className={styles.confirmAddBtns}
+                  style={{
+                    backgroundColor: "rgb(117 18 58)",
+                    color: "white",
+                  }}
+                  id="friend-confirm-btn">
+                  {/* styles.colorEdRed */}
+                  Confirm
+                </div>
+              </Link>
+
+              <Link to="">
+                <div
+                  className={styles.confirmAddBtns}
+                  id="friend-delete-btn"
+                  style={{
+                    marginLeft: "10px",
+                    backgroundColor: "rgb(156, 156, 156)",
+                    color: "white",
+                  }}>
+                  Remove
+                </div>
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        <div className={styles.usersBox}>
+          <div className={styles.usersImg}>
+            <img src={img} alt="profile" />
+          </div>
+
+          <div className={styles.usersName}>
+            <h3>
+              <Link to=""> Akash Lamba kumar singh</Link>
+            </h3>
+            <div className={styles.confirmAddBtnsBox}>
+              <Link to="">
+                <div
+                  className={styles.confirmAddBtns}
+                  style={{
+                    backgroundColor: "rgb(117 18 58)",
+                    color: "white",
+                  }}
+                  id="friend-confirm-btn">
+                  {/* styles.colorEdRed */}
+                  Confirm
+                </div>
+              </Link>
+
+              <Link to="">
+                <div
+                  className={styles.confirmAddBtns}
+                  id="friend-delete-btn"
+                  style={{
+                    marginLeft: "10px",
+                    backgroundColor: "rgb(156, 156, 156)",
+                    color: "white",
+                  }}>
+                  Remove
+                </div>
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        <div className={styles.usersBox}>
+          <div className={styles.usersImg}>
+            <img src={img} alt="profile" />
+          </div>
+
+          <div className={styles.usersName}>
+            <h3>
+              <Link to=""> Akash Lamba kumar singh</Link>
+            </h3>
+            <div className={styles.confirmAddBtnsBox}>
+              <Link to="">
+                <div
+                  className={styles.confirmAddBtns}
+                  style={{
+                    backgroundColor: "rgb(117 18 58)",
+                    color: "white",
+                  }}
+                  id="friend-confirm-btn">
+                  {/* styles.colorEdRed */}
+                  Confirm
+                </div>
+              </Link>
+
+              <Link to="">
+                <div
+                  className={styles.confirmAddBtns}
+                  id="friend-delete-btn"
+                  style={{
+                    marginLeft: "10px",
+                    backgroundColor: "rgb(156, 156, 156)",
+                    color: "white",
+                  }}>
+                  Remove
+                </div>
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        <div className={styles.usersBox}>
+          <div className={styles.usersImg}>
+            <img src={img} alt="profile" />
+          </div>
+
+          <div className={styles.usersName}>
+            <h3>
+              <Link to=""> Akash Lamba kumar singh</Link>
+            </h3>
+            <div className={styles.confirmAddBtnsBox}>
+              <Link to="">
+                <div
+                  className={styles.confirmAddBtns}
+                  style={{
+                    backgroundColor: "rgb(117 18 58)",
+                    color: "white",
+                  }}
+                  id="friend-confirm-btn">
+                  {/* styles.colorEdRed */}
+                  Confirm
+                </div>
+              </Link>
+
+              <Link to="">
+                <div
+                  className={styles.confirmAddBtns}
+                  id="friend-delete-btn"
+                  style={{
+                    marginLeft: "10px",
+                    backgroundColor: "rgb(156, 156, 156)",
+                    color: "white",
+                  }}>
+                  Remove
+                </div>
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        <div className={styles.usersBox}>
+          <div className={styles.usersImg}>
+            <img src={img} alt="profile" />
+          </div>
+
+          <div className={styles.usersName}>
+            <h3>
+              <Link to=""> Akash Lamba kumar singh</Link>
+            </h3>
+            <div className={styles.confirmAddBtnsBox}>
+              <Link to="">
+                <div
+                  className={styles.confirmAddBtns}
+                  style={{
+                    backgroundColor: "rgb(117 18 58)",
+                    color: "white",
+                  }}
+                  id="friend-confirm-btn">
+                  {/* styles.colorEdRed */}
+                  Confirm
+                </div>
+              </Link>
+
+              <Link to="">
+                <div
+                  className={styles.confirmAddBtns}
+                  id="friend-delete-btn"
+                  style={{
+                    marginLeft: "10px",
+                    backgroundColor: "rgb(156, 156, 156)",
+                    color: "white",
+                  }}>
+                  Remove
+                </div>
+              </Link>
+            </div>
+          </div>
+        </div>
+
         <div className={styles.usersBox}>
           <div className={styles.usersImg}>
             <img src={img} alt="profile" />
@@ -116,6 +352,46 @@ const Friends = ({ styles }) => {
             </div>
           </div>
         </div>
+
+        <div className={styles.usersBox}>
+          <div className={styles.usersImg}>
+            <img src={img} alt="profile" />
+          </div>
+
+          <div className={styles.usersName}>
+            <h3>
+              <Link to=""> Akash Lamba kumar singh</Link>
+            </h3>
+            <div className={styles.confirmAddBtnsBox}>
+              <Link to="">
+                <div
+                  className={styles.confirmAddBtns}
+                  style={{
+                    backgroundColor: "rgb(117 18 58)",
+                    color: "white",
+                  }}
+                  id="friend-confirm-btn">
+                  {/* styles.colorEdRed */}
+                  Add
+                </div>
+              </Link>
+
+              <Link to="">
+                <div
+                  className={styles.confirmAddBtns}
+                  id="friend-delete-btn"
+                  style={{
+                    marginLeft: "10px",
+                    backgroundColor: "rgb(156, 156, 156)",
+                    color: "white",
+                  }}>
+                  Remove
+                </div>
+              </Link>
+            </div>
+          </div>
+        </div>
+
         {/* <!-- request user box start--> */}
       </div>
     </div>

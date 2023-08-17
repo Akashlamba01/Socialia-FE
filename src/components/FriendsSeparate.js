@@ -5,7 +5,7 @@ const FriendsSeparate = ({ styles }) => {
     <dev className={styles.friendContainer}>
       <div className={styles.frinedSearchType}>
         <div className={styles.friendHeading}>
-          <h1 style={{ fontSize: "24px" }}>Friends</h1>
+          <h2>Friends</h2>
 
           <form action="">
             <input type="text" placeholder="search..." />

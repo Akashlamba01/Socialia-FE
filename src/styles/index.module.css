@@ -115,6 +115,7 @@ a {
 
 .postContent {
   padding: 0 10px;
+  /* text-align: justify; */
 }
 
 .postProfileImg {

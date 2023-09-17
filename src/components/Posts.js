@@ -1,8 +1,18 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import img from "./img.jpg";
 import { Link } from "react-router-dom";
+import Popup from "reactjs-popup";
+import postStyles from "../styles/posts.module.css";
+import useWindowSize from "../utils/useWindowSize";
+import PostSeparate from "./PostSeparate";
 
 const Posts = ({ styles }) => {
+  const size = useWindowSize();
+  const contentStyle = {
+    width: "50vw",
+    height: "50vh",
+  };
+
   return (
     <div className={styles.postTimeline}>
       <div className={styles.createPost}>
@@ -71,11 +81,46 @@ const Posts = ({ styles }) => {
             </button>
           </Link>
 
-          <Link to="">
-            <button className={styles.likeCommentBox}>
-              <i className="fa-regular fa-comment"></i> 45
-            </button>
-          </Link>
+          <Popup
+            contentStyle={
+              size.width < 719
+                ? {
+                    width: "100vw",
+                    height: "100vh",
+                    padding: 0,
+                    margin: 0,
+                  }
+                : { width: "50vw", height: "650px" }
+            }
+            trigger={
+              <Link to="">
+                <button className={styles.likeCommentBox}>
+                  <i className="fa-regular fa-comment"></i> 45
+                </button>
+              </Link>
+            }
+            modal
+            nested>
+            {(close) => (
+              <div className={postStyles.postsContainer}>
+                <div className={postStyles.postUserDetails}>
+                  <i
+                    style={{
+                      marginTop: "10px",
+                      marginLeft: "10px",
+                      fontSize: "20px",
+                      color: "rgb(80, 80, 80)",
+                      cursor: "pointer",
+                    }}
+                    class="fa-solid fa-arrow-left-long"
+                    onClick={() => close()}></i>
+                  <h3>Akash's Post</h3>
+                </div>
+
+                <PostSeparate styles={styles} img={img} />
+              </div>
+            )}
+          </Popup>
         </div>
       </div>
     </div>
